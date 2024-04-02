@@ -1,0 +1,40 @@
+.getQuote {
+  height: 70vh;
+  width: 95%;
+  background-color: white;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-radius: 10px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.getQuote > span {
+  color: black;
+}
+.policySpan {
+  width: 70%;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
+}
+.texthead {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.get-coute-button {
+  justify-content: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: rgb(241, 112, 112);
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+}
