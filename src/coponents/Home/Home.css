@@ -21,7 +21,7 @@
   height: 280px;
   text-align: center;
   color: #fff;
-  top: 15vh;
+  top: 9vh;
   left: 0px;
   height: 100%;
   width: 100%;
@@ -56,6 +56,14 @@
   align-items: start;
   justify-content: start;
 }
+.content > .left > span:nth-child(4) {
+  font-size: 5.1em;
+  font-weight: 700;
+  color: rgb(247, 180, 24);
+
+  align-items: start;
+  justify-content: start;
+}
 .content > .left > span > span {
   font-size: 1.1em;
   font-weight: 700;
@@ -63,15 +71,15 @@
 }
 .content .right {
   color: aliceblue;
-  padding-top: 0%;
-  padding-left: 0%;
+  padding: 50px;
   width: 50%;
-  flex: 0.4;
+  height: 70%;
+  flex: 0.3;
 }
 .wappBar {
   height: 50px;
   width: 90px;
-  position: absolute;
+  position: fixed;
   top: 40%;
   left: 95%;
   background: white;

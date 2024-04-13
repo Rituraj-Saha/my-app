@@ -1,7 +1,7 @@
 import React from "react";
-import WarentyImg from "../../res/warrenty.avif";
-import Personalized from "../../res/personalized.avif";
-import Transparentprice from "../../res/transparentprice.avif";
+import WarentyImg from "../../../res/warrenty.avif";
+import Personalized from "../../../res/personalized.avif";
+import Transparentprice from "../../../res/transparentprice.avif";
 import "./Badgesection.css";
 const BadgeSection = () => {
   return (

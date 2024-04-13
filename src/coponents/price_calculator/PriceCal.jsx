@@ -1,7 +1,7 @@
 import React from "react";
 
 const PriceCal = () => {
-  return <div>PriceCal</div>;
+  return <div className="hwwrkP">PriceCal</div>;
 };
 
 export default PriceCal;
