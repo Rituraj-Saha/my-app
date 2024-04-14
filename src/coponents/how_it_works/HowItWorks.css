@@ -1,5 +1,23 @@
-.how-it-works-parent {
-  height: 100vh;
+.how-it-works-working-parent {
+  height: 60vh;
   margin-top: 30vh;
-  background-color: aqua;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.how-it-works-badges {
+  background-color: black;
+  width: 60px !important;
+  height: 60px !important;
+  padding: 50px;
+}
+.avtar-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18vw;
+  flex-direction: column;
+  gap: 16px;
 }

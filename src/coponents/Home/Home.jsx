@@ -21,7 +21,7 @@ const Home = (props) => {
         spy: true,
         smooth: true,
         duration: 500,
-        offset: -450,
+        offset: -300,
       });
   });
   return (
