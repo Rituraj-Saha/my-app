@@ -9,13 +9,21 @@ import TaglineSectionOne from "./TagLineSection/TaglineSectionOne";
 import SlidingPanel from "./SlidingPanel/SlidingPanel";
 import HowItWorks from "../how_it_works/HowItWorks";
 import { useLocation } from "react-router-dom";
-const Home = () => {
+import { Element, scroller } from "react-scroll";
+const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
-
-  // useEffect(() => {
-  //   console.log(window.location.pathname.)
-  // }, []);
+  useEffect(() => {
+    console.log("my props:" + props.howItWorks);
+    if (props.howItWorks == "howItWorks")
+      scroller.scrollTo("howItWorks", {
+        to: "howItWorks",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -450,
+      });
+  });
   return (
     <>
       {useIsMobile() ? (

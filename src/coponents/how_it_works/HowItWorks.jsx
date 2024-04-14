@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 const HowItWorks = () => {
   return (
     <div className="how-it-works-parent" id="how-it-works-parent">
-      <Element name="howItWorks" className="howItWorks">
+      <Element name="howItWorks" className="howItWorks" id="howItWorks">
         HowItWorks
       </Element>
     </div>

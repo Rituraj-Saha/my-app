@@ -22,7 +22,6 @@ import {
   useNavigate,
 } from "react-router-dom";
 const Nav = () => {
-  // const [path, setPath] = useState("/");
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
     Events.scrollEvent.register("begin", (to, element) => {
@@ -43,9 +42,6 @@ const Nav = () => {
       Events.scrollEvent.remove("end");
     };
   }, []);
-  // function handlePathForHowItWorks(){
-  //   (window.location.pathname=="/howItWorks"?setPath("/howItWorks"):setPath("/"))
-  // }
 
   return (
     <Router>
@@ -71,17 +67,6 @@ const Nav = () => {
                 {" "}
                 How It Works
               </Link>
-              <ScrollLink
-                activeClass="active"
-                to="howItWorks"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-450}
-              >
-                {" "}
-                How It Works
-              </ScrollLink>
             </li>
             <li>
               {/* <ScrollLink
@@ -107,7 +92,11 @@ const Nav = () => {
           <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/offerings" element={<Offering />}></Route>
-            <Route exact path="/howItWorks" element={<Home />}></Route>
+            <Route
+              exact
+              path="/howItWorks"
+              element={<Home howItWorks="howItWorks" />}
+            ></Route>
             <Route
               exact
               path="/price_calculator"
