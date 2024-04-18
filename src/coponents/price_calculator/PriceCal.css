@@ -1,0 +1,8 @@
+.priceCalParent {
+  width: 38vw;
+  height: 80vh;
+  background-color: aqua;
+  display: flex;
+  margin-top: 80px;
+  margin-left: 30%;
+}

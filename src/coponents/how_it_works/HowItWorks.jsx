@@ -29,6 +29,7 @@ const HowItWorks = () => {
               src={Sample}
               className="how-it-works-badges"
             />
+
             <span>Meet our designer</span>
             <span>
               Our Homecrafter team will reachout to you to understand your

@@ -10,14 +10,23 @@ import SlidingPanel from "./SlidingPanel/SlidingPanel";
 import HowItWorks from "../how_it_works/HowItWorks";
 import { useLocation } from "react-router-dom";
 import { Element, scroller } from "react-scroll";
+import PriceCal from "../price_calculator/PriceCal";
 const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
   useEffect(() => {
     console.log("my props:" + props.howItWorks);
-    if (props.howItWorks == "howItWorks")
+    if (props.scrollToElement == "howItWorks")
       scroller.scrollTo("howItWorks", {
         to: "howItWorks",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
+    if (props.scrollToElement == "priceCal")
+      scroller.scrollTo("priceCal", {
+        to: "priceCal",
         spy: true,
         smooth: true,
         duration: 500,
@@ -54,6 +63,7 @@ const Home = (props) => {
             <SlidingPanel />
 
             <HowItWorks id="how_it_works" />
+            <PriceCal id="price_calculator" />
           </div>
         </>
       )}

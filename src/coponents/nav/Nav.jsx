@@ -95,12 +95,12 @@ const Nav = () => {
             <Route
               exact
               path="/howItWorks"
-              element={<Home howItWorks="howItWorks" />}
+              element={<Home scrollToElement="howItWorks" />}
             ></Route>
             <Route
               exact
               path="/price_calculator"
-              element={<PriceCal />}
+              element={<Home scrollToElement="priceCal" />}
             ></Route>
           </Routes>
           {/* <Home />
