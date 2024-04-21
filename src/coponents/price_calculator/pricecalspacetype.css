@@ -6,4 +6,5 @@
 .my-price-cal-swiper {
   height: 100%;
   width: 90% !important;
+  cursor: grab;
 }

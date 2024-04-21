@@ -15,10 +15,18 @@ const PriceCalSpaceType = () => {
       />
     </swiper-slide>,
     <swiper-slide>
-      <PriceEstematorCard />
+      <PriceEstematorCard
+        image={SampleImage}
+        spaceType="Moduler Kitchen"
+        spaceDesc="Get an approximate Costing for your moduler kitchen"
+      />
     </swiper-slide>,
     <swiper-slide>
-      <PriceEstematorCard />
+      <PriceEstematorCard
+        image={SampleImage}
+        spaceType="Wardrobe"
+        spaceDesc="Get an approximate Costing for your custom wardrobe"
+      />
     </swiper-slide>,
   ];
   useEffect(() => {
@@ -62,7 +70,7 @@ const PriceCalSpaceType = () => {
         ref={swiperElRef}
         init="false"
         slides-per-view="2"
-        navigation="false"
+        navigation="true"
         pagination="true"
         class="my_swiper my-price-cal-swiper"
         spaceBetween="50"

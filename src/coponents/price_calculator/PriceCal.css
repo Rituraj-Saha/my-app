@@ -1,6 +1,6 @@
 .priceCalParent {
   width: 60vw;
-  height: 90vh;
+  height: 85vh;
   background-color: white;
   display: flex;
   margin-top: 80px;
@@ -13,7 +13,7 @@
 }
 .price-cal-top {
   display: flex;
-  flex: 0.2;
+  flex: 0.1;
   height: 100%;
   background-color: rgb(255, 255, 255);
   justify-content: center;

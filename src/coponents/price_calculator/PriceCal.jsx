@@ -18,14 +18,13 @@ const PriceCal = () => {
   );
   const nextButtonHandler = () => {
     dispatch(nextStagePriceCal());
-    console.log("priceCal on Next:" + JSON.stringify(priceCalStage));
+    // console.log("priceCal on Next:" + JSON.stringify(priceCalStage));
   };
   const backButtonHandler = () => {
     dispatch(backStagePriceCal());
-    console.log("priceCal on Back:" + priceCalStage);
+    // console.log("priceCal on Back:" + priceCalStage);
   };
-  function test() {
-    console.log("inside switch:");
+  function stageSelctor() {
     switch (priceCalStage) {
       case 1:
         return <PriceCalSpaceType />;
@@ -63,7 +62,7 @@ const PriceCal = () => {
           </div>
         </div>
         <Divider></Divider>
-        <div className="priceCalContent">{test()}</div>
+        <div className="priceCalContent">{stageSelctor()}</div>
         <div className="price-cal-button">
           <div className="price-cal-back" onClick={backButtonHandler}>
             Back
