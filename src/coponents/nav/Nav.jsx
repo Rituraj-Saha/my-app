@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Nav.css";
 import Home from "../Home/Home";
 import Offering from "../offerings/Offering";
-import PriceCal from "../price_calculator/PriceCal";
+
 import ScrollToTop from "../../util/ScrollToTop";
 
 import {

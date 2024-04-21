@@ -1,8 +1,76 @@
 .priceCalParent {
-  width: 38vw;
-  height: 80vh;
-  background-color: aqua;
+  width: 60vw;
+  height: 90vh;
+  background-color: white;
   display: flex;
   margin-top: 80px;
-  margin-left: 30%;
+  margin: auto;
+  margin-top: 80px;
+  flex-direction: column;
+  filter: drop-shadow(0 0.5rem 0.75rem rgb(152, 152, 152));
+  flex: 1;
+  border-radius: 10px;
+}
+.price-cal-top {
+  display: flex;
+  flex: 0.2;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  /* filter: drop-shadow(0 0 0.75rem rgb(201, 201, 201)); */
+}
+.price-cal-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.price-cal-step-circle {
+  background-color: blue;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+.price-cal-step-line {
+  width: 100px;
+  height: 1px;
+  background-color: blue;
+}
+.priceCalContent {
+  display: flex;
+  flex: 0.8;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.price-cal-button {
+  display: flex;
+  flex: 0.1;
+  width: 100%;
+  flex-direction: row;
+  gap: 70%;
+  background-color: beige;
+  align-items: center;
+  justify-content: center;
+}
+.price-cal-back {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 112, 112);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+}
+.price-cal-next {
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 112, 112);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
 }

@@ -1,0 +1,9 @@
+.priceCalSpaceType-parent {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: auto;
+}
+.my-price-cal-swiper {
+  height: 100%;
+  width: 90% !important;
+}

@@ -1,0 +1,30 @@
+.price-esteem-parent {
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  justify-content: center;
+  cursor: grab;
+  text-align: left;
+  gap: 10px;
+  filter: drop-shadow(0 0.5rem 0.75rem rgb(152, 152, 152));
+  background-color: white;
+  border-radius: 15px;
+}
+.price-estem-select-type-btn {
+  background-color: var(--buttonBack);
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+}
+.price-esteem-parent span:nth-of-type(1) {
+  font-size: 15px;
+  font-weight: bold;
+}
