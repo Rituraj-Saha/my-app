@@ -36,3 +36,7 @@
   font-size: 15px;
   font-weight: bold;
 }
+.price-esteem-parent > img {
+  width: 100%;
+  height: 60%;
+}

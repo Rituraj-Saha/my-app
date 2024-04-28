@@ -5,6 +5,9 @@ import bhkTypeSliceReduce from "../features/priceCalState/stage2Store/bhkTypeSli
 import kitchenLayoutSliceReduce from "../features/priceCalState/stage2Store/kitchenLayoutSlice";
 import worddrobeHeightReduce from "../features/priceCalState/stage2Store/worddrobeHeightSlice";
 import fullHomeReducer from "../features/priceCalState/stage3Store/FullflatSlice";
+import KitchenLayoutmeasurementReducer from "../features/priceCalState/stage3Store/KitchenLayoutmeasurementSlice";
+import WorddeobeTypeSelectorReduce from "../features/priceCalState/stage3Store/WorddrobeTypeSelector";
+import pkgSlectorReduce from "../features/priceCalState/stage4store/PackageSlice";
 export const store = configureStore({
   reducer: {
     priceCalStageReducer: priceCalStageReducer,
@@ -12,6 +15,9 @@ export const store = configureStore({
     bhkTypeSliceReduce: bhkTypeSliceReduce,
     kitchenLayoutSliceReduce: kitchenLayoutSliceReduce,
     worddrobeHeightReduce: worddrobeHeightReduce,
+    KitchenLayoutmeasurementReducer: KitchenLayoutmeasurementReducer,
     fullHomeReducer: fullHomeReducer,
+    WorddeobeTypeSelectorReduce: WorddeobeTypeSelectorReduce,
+    pkgSlectorReduce: pkgSlectorReduce,
   },
 });

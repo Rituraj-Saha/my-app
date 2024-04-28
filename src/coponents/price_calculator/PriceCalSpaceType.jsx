@@ -12,6 +12,7 @@ const PriceCalSpaceType = () => {
         image={SampleImage}
         spaceType="Full Home"
         spaceDesc="Get an approximate Costing for your full home design"
+        usedFor="priceEsetematorType"
       />
     </swiper-slide>,
     <swiper-slide>
@@ -19,6 +20,7 @@ const PriceCalSpaceType = () => {
         image={SampleImage}
         spaceType="Moduler Kitchen"
         spaceDesc="Get an approximate Costing for your moduler kitchen"
+        usedFor="priceEsetematorType"
       />
     </swiper-slide>,
     <swiper-slide>
@@ -26,6 +28,7 @@ const PriceCalSpaceType = () => {
         image={SampleImage}
         spaceType="Wardrobe"
         spaceDesc="Get an approximate Costing for your custom wardrobe"
+        usedFor="priceEsetematorType"
       />
     </swiper-slide>,
   ];
