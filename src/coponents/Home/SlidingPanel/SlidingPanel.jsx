@@ -6,6 +6,7 @@ import SlideCard from "./SlideCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
+import useIsMobile from "../../../util/useIsMobile";
 register();
 
 const SlidingPanel = () => {
@@ -95,7 +96,7 @@ const SlidingPanel = () => {
     Object.assign(swiperContainer, params);
     swiperContainer.initialize();
   }, []);
-
+  function returnNoOfSlide() {}
   return (
     <div className="sliding_panel_parent">
       <div className="sliding_panel_heading">
@@ -124,7 +125,7 @@ const SlidingPanel = () => {
       <swiper-container
         ref={swiperElRef}
         init="false"
-        slides-per-view="3"
+        slides-per-view={useIsMobile() ? "1" : "3"}
         navigation="true"
         pagination="true"
         class="my_swiper"

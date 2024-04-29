@@ -55,9 +55,9 @@ const HomeMobile = (props) => {
         </div>
         <BadgeSectionMobile />
         <TaglineSectionOne />
-        {/* <SlidingPanel />
+        <SlidingPanel />
 
-        <HowItWorks id="how_it_works" />
+        {/* <HowItWorks id="how_it_works" />
         <PriceCal id="price_calculator" /> */}
       </div>
     </>
