@@ -1,5 +1,5 @@
 .slide-card {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -7,9 +7,14 @@
   flex: 1;
   background-color: beige;
   gap: 15px;
+  margin: 10px;
+  align-items: start;
+  justify-content: start;
 }
 .slide-card-img {
-  height: 70%;
+  width: 90%;
+  height: 60%;
+  margin: auto;
 }
 .slide-card-bottom {
   display: flex;
@@ -17,6 +22,7 @@
   flex-direction: column;
   flex: 1;
   align-items: flex-start;
+  justify-content: center;
   padding: 20px;
 }
 .slide-card-subtitleSection {
@@ -35,12 +41,16 @@
 .slide-card-title {
   font-size: 18px;
   font-weight: 600;
+  text-align: left;
 }
 .slide-card-getQuoteButton {
+  display: flex;
   border: 2px solid rgb(239, 146, 146);
   border-radius: 5px;
   margin-left: 5px;
-  height: 25px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
   flex: 0.4;
   width: 100%;
   padding-left: 15px;

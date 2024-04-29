@@ -1,11 +1,37 @@
 .how-it-works-working-parent {
-  height: 60vh;
-  margin-top: 30vh;
+  margin-top: 20vh;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 25px;
+}
+.how-it-works-working-parent >span:nth-child(1){
+  font-size: 30px;
+}
+.how-it-works-working-parent-mobile >span:nth-child(1){
+  font-size: 25px;
+}
+.how-it-works-working-parent-mobile{
+  
+  margin-top: 30%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.badjes{
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+.badjes-mobile{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  gap:20px
 }
 .how-it-works-badges {
   background: rgb(160, 0, 217);
@@ -15,15 +41,25 @@
     rgb(246, 37, 18) 47%,
     rgba(231, 13, 223, 1) 98%
   );
-  width: 60px !important;
-  height: 60px !important;
-  padding: 50px;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 20px;
 }
 .avtar-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18vw;
   flex-direction: column;
   gap: 16px;
+}
+.avtar-card-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.avtar-title-sub-wrap{
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }

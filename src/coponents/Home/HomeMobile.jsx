@@ -57,8 +57,8 @@ const HomeMobile = (props) => {
         <TaglineSectionOne />
         <SlidingPanel />
 
-        {/* <HowItWorks id="how_it_works" />
-        <PriceCal id="price_calculator" /> */}
+         <HowItWorks id="how_it_works" />
+         <PriceCal id="price_calculator" />
       </div>
     </>
   );

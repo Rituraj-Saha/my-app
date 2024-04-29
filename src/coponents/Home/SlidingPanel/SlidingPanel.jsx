@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
+
 register();
 
 const SlidingPanel = () => {
@@ -30,32 +31,32 @@ const SlidingPanel = () => {
     <swiper-slide>
       <SlideCard
         image={SampleImg}
-        title={"xyz"}
-        subtitle={"abc"}
+        title={"Monochromatic grey 2 BHK"}
+        subtitle={"add cloudy hues to your space"}
         handleClick={handleClick}
       />
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
         image={SampleImg}
-        title={"xyz"}
-        subtitle={"abc"}
+        title={"Monochromatic grey 2 BHK"}
+        subtitle={"add cloudy hues to your space"}
         handleClick={handleClick}
       />
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
         image={SampleImg}
-        title={"xyz"}
-        subtitle={"abc"}
+        title={"Monochromatic grey 2 BHK"}
+        subtitle={"add cloudy hues to your space"}
         handleClick={handleClick}
       />
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
         image={SampleImg}
-        title={"xyz"}
-        subtitle={"abc"}
+        title={"Monochromatic grey 2 BHK"}
+        subtitle={"add cloudy hues to your space"}
         handleClick={handleClick}
       />
     </swiper-slide>,
@@ -99,7 +100,7 @@ const SlidingPanel = () => {
   function returnNoOfSlide() {}
   return (
     <div className="sliding_panel_parent">
-      <div className="sliding_panel_heading">
+      <div className={useIsMobile()?"sliding_panel_heading_mobile":"sliding_panel_heading"}>
         <span>Homes for every style</span>
         <span>
           Superior finshes, trendy designs and quality modules at affordable
@@ -107,20 +108,46 @@ const SlidingPanel = () => {
         </span>
       </div>
 
-      {openDialog ? (
-        <div className="alertdialog">
-          <div className="alertdialog_container">
-            <GetQuote />
-            <button
-              onClick={() => setOpenDialog(false)}
-              className="taglinespan3_alertdialog_cls_button"
-            >
-              <CancelIcon sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }} />
-            </button>
-          </div>
-        </div>
+      {useIsMobile() ? (
+        <>
+          {openDialog ? (
+            <div className="alertdialog-mobile">
+              <div className="alertdialog_container-mobile">
+                <GetQuote />
+                <button
+                  onClick={() => setOpenDialog(false)}
+                  className="taglinespan3_alertdialog_cls_button-mobile"
+                >
+                  <CancelIcon
+                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                  />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
       ) : (
-        <></>
+        <>
+          {openDialog ? (
+            <div className="alertdialog">
+              <div className="alertdialog_container">
+                <GetQuote />
+                <button
+                  onClick={() => setOpenDialog(false)}
+                  className="taglinespan3_alertdialog_cls_button"
+                >
+                  <CancelIcon
+                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                  />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
       )}
       <swiper-container
         ref={swiperElRef}
