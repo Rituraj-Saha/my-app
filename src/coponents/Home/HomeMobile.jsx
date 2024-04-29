@@ -1,21 +1,41 @@
 import React, { useEffect } from "react";
-import "./Home.css";
+import "./HomeMobile.css";
 import GetQuote from "../GetQuote/GetQuote";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import useIsMobile from "../../util/useIsMobile";
-import BadgeSection from "./BadgeSection/BadgeSection";
+import BadgeSectionMobile from "./BadgeSection/BadgeSctionMobile";
 import TaglineSectionOne from "./TagLineSection/TaglineSectionOne";
 import SlidingPanel from "./SlidingPanel/SlidingPanel";
 import HowItWorks from "../how_it_works/HowItWorks";
 import { useLocation } from "react-router-dom";
 import { Element, scroller } from "react-scroll";
 import PriceCal from "../price_calculator/PriceCal";
-const HomeMobile = () => {
+const HomeMobile = (props) => {
+  const { state } = useLocation();
+  const { targetId } = state || {};
+  useEffect(() => {
+    console.log("my props:" + props.howItWorks);
+    if (props.scrollToElement == "howItWorks")
+      scroller.scrollTo("howItWorks", {
+        to: "howItWorks",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
+    if (props.scrollToElement == "priceCal")
+      scroller.scrollTo("priceCal", {
+        to: "priceCal",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
+  });
   return (
-    <div>
-      {" "}
-      <div className="home">
-        <div className="content">
+    <>
+      <div className="home-mobile">
+        <div className="content-mobile">
           <div className="left">
             <span>Bring home beautiful</span>
 
@@ -33,14 +53,14 @@ const HomeMobile = () => {
             <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
           </div>
         </div>
-        <BadgeSection />
+        <BadgeSectionMobile />
         <TaglineSectionOne />
-        <SlidingPanel />
+        {/* <SlidingPanel />
 
         <HowItWorks id="how_it_works" />
-        <PriceCal id="price_calculator" />
+        <PriceCal id="price_calculator" /> */}
       </div>
-    </div>
+    </>
   );
 };
 

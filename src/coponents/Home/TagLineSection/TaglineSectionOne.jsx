@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Tagline.css";
 import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
+import useIsMobile from "../../../util/useIsMobile";
 const TaglineSectionOne = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
@@ -20,21 +21,48 @@ const TaglineSectionOne = () => {
       <span onClick={handleClick} className="taglinespan3">
         BOOK FREE CONSULTATION
       </span>
-      {openDialog ? (
-        <div className="alertdialog">
-          <div className="alertdialog_container">
-            <GetQuote />
-            <button
-              onClick={() => setOpenDialog(false)}
-              className="taglinespan3_alertdialog_cls_button"
-            >
-              <CancelIcon sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }} />
-            </button>
-          </div>
-        </div>
+      {useIsMobile() ? (
+        <>
+          {openDialog ? (
+            <div className="alertdialog-mobile">
+              <div className="alertdialog_container-mobile">
+                <GetQuote />
+                <button
+                  onClick={() => setOpenDialog(false)}
+                  className="taglinespan3_alertdialog_cls_button-mobile"
+                >
+                  <CancelIcon
+                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                  />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
       ) : (
-        <></>
+        <>
+          {openDialog ? (
+            <div className="alertdialog">
+              <div className="alertdialog_container">
+                <GetQuote />
+                <button
+                  onClick={() => setOpenDialog(false)}
+                  className="taglinespan3_alertdialog_cls_button"
+                >
+                  <CancelIcon
+                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                  />
+                </button>
+              </div>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
       )}
+      {}
     </div>
   );
 };

@@ -13,6 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
+import HomeMobile from "../Home/HomeMobile";
 const NavMobile = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -72,7 +73,7 @@ const NavMobile = () => {
         </Drawer>
         <div className="mobContainer">
           <Routes>
-            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/" element={<HomeMobile />}></Route>
           </Routes>
         </div>
       </div>
