@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
+import PriceCal from "../../price_calculator/PriceCal";
 
 register();
 
@@ -113,7 +114,7 @@ const SlidingPanel = () => {
           {openDialog ? (
             <div className="alertdialog-mobile">
               <div className="alertdialog_container-mobile">
-                <GetQuote />
+                <PriceCal />
                 <button
                   onClick={() => setOpenDialog(false)}
                   className="taglinespan3_alertdialog_cls_button-mobile"
@@ -133,7 +134,7 @@ const SlidingPanel = () => {
           {openDialog ? (
             <div className="alertdialog">
               <div className="alertdialog_container">
-                <GetQuote />
+              <PriceCal />
                 <button
                   onClick={() => setOpenDialog(false)}
                   className="taglinespan3_alertdialog_cls_button"

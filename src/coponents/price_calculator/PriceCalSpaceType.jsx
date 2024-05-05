@@ -3,6 +3,7 @@ import { register } from "swiper/element/bundle";
 import PriceEstematorCard from "./PriceEstematorCard";
 import "./pricecalspacetype.css";
 import SampleImage from "../../res/interior_home.jpg";
+import useIsMobile from "../../util/useIsMobile";
 register();
 const PriceCalSpaceType = () => {
   const swiperElRef = useRef(null);
@@ -68,7 +69,22 @@ const PriceCalSpaceType = () => {
     swiperContainer.initialize();
   }, []);
   return (
-    <div className="priceCalSpaceType-parent">
+    <>
+    {useIsMobile()?(<>
+      <div className="priceCalSpaceType-parent">
+      <swiper-container
+        ref={swiperElRef}
+        init="false"
+        slides-per-view="1"
+        navigation="true"
+        pagination="true"
+        class="my_swiper my-price-cal-swiper"
+        spaceBetween="50"
+      >
+        {mySlides2}
+      </swiper-container>
+    </div>
+    </>):<> <div className="priceCalSpaceType-parent">
       <swiper-container
         ref={swiperElRef}
         init="false"
@@ -80,7 +96,9 @@ const PriceCalSpaceType = () => {
       >
         {mySlides2}
       </swiper-container>
-    </div>
+    </div></>}
+   
+    </>
   );
 };
 

@@ -30,10 +30,12 @@
   cursor: pointer;
 }
 .alertdialog {
+  display: flex;
   position: fixed;
   top: 10vh;
-  left: 30vw;
+  left: 10%;
   height: 80vh;
+  width: 80vw;
   border-radius: 5px;
   background-color: rgba(106, 106, 106, 0.4);
   z-index: 2;
@@ -60,18 +62,22 @@
 }
 .alertdialog_container {
   height: 90%;
-  width: 80%;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  
 }
 .alertdialog_container-mobile {
   display: flex;
   height: 88%;
+  width: 100%;
 }
 .taglinespan3_alertdialog_cls_button-mobile {
   position: absolute;
-  top: 30px;
+  top: 2%;
   left: 80%;
   border-radius: 40%;
   border: none;
