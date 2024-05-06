@@ -32,7 +32,7 @@ const NavMobile = () => {
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                 </ListItemIcon>
 
-                <Link to="/">
+                <Link to="/my-app/">
                   {" "}
                   <ListItemText primary={text} />
                 </Link>
@@ -73,7 +73,7 @@ const NavMobile = () => {
         </Drawer>
         <div className="mobContainer">
           <Routes>
-            <Route exact path="/" element={<HomeMobile />}></Route>
+            <Route exact path="/my-app/" element={<HomeMobile />}></Route>
           </Routes>
         </div>
       </div>

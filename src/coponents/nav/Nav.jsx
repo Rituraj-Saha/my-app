@@ -52,7 +52,7 @@ const Nav = () => {
           <ul>
             <li>
               {" "}
-              <Link to="/" scroll={true}>
+              <Link to="/my-app/" scroll={true}>
                 Interior
               </Link>
             </li>
@@ -90,7 +90,7 @@ const Nav = () => {
 
         <div className="container">
           <Routes>
-            <Route exact path="/" element={<Home />}></Route>
+            <Route exact path="/my-app/" element={<Home />}></Route>
             <Route exact path="/offerings" element={<Offering />}></Route>
             <Route
               exact

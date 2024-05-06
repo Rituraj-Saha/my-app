@@ -61,7 +61,7 @@
   justify-content: center;
 }
 .alertdialog_container {
-  height: 90%;
+  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -72,7 +72,7 @@
 }
 .alertdialog_container-mobile {
   display: flex;
-  height: 88%;
+  height: 100%;
   width: 100%;
 }
 .taglinespan3_alertdialog_cls_button-mobile {
