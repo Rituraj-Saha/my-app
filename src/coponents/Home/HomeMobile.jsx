@@ -47,7 +47,7 @@ const HomeMobile = (props) => {
             <span>HomeCrafter</span>
           </div>
           <div className="right">
-            <GetQuote />
+            {/* <GetQuote /> */}
           </div>
           <div className="wappBar">
             <WhatsAppIcon style={{ width: "55px", height: "48px" }} />

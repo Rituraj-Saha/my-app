@@ -76,9 +76,9 @@ const Nav = () => {
                 smooth={true}
                 duration={500}
               > */}
-              <Link to="/price_calculator" scroll={true}>
+              <Link to="/contact" scroll={true}>
                 {" "}
-                Price Calculator
+               Contact
               </Link>
               {/* Price Calculator */}
               {/* </ScrollLink> */}
@@ -99,8 +99,8 @@ const Nav = () => {
             ></Route>
             <Route
               exact
-              path="/price_calculator"
-              element={<Home scrollToElement="priceCal" />}
+              path="/contact"
+              element={<Home scrollToElement="contact" />}
             ></Route>
           </Routes>
           {/* <Home />

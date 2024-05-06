@@ -10,12 +10,12 @@ import SlidingPanel from "./SlidingPanel/SlidingPanel";
 import HowItWorks from "../how_it_works/HowItWorks";
 import { useLocation } from "react-router-dom";
 import { Element, scroller } from "react-scroll";
-import PriceCal from "../price_calculator/PriceCal";
+import Contact from "../ContactUs/Contact";
 const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
   useEffect(() => {
-    console.log("my props:" + props.howItWorks);
+    console.log("my props:" + props.scrollToElement);
     if (props.scrollToElement == "howItWorks")
       scroller.scrollTo("howItWorks", {
         to: "howItWorks",
@@ -24,9 +24,9 @@ const Home = (props) => {
         duration: 500,
         offset: -300,
       });
-    if (props.scrollToElement == "priceCal")
-      scroller.scrollTo("priceCal", {
-        to: "priceCal",
+    if (props.scrollToElement == "contact")
+      scroller.scrollTo("contact", {
+        to: "contact",
         spy: true,
         smooth: true,
         duration: 500,
@@ -52,7 +52,7 @@ const Home = (props) => {
                 <span>HomeCrafter</span>
               </div>
               <div className="right">
-                <GetQuote />
+                {/* <GetQuote /> */}
               </div>
               <div className="wappBar">
                 <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
@@ -64,6 +64,7 @@ const Home = (props) => {
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}
+            <Contact id="contact"/>
           </div>
         </>
       )}
