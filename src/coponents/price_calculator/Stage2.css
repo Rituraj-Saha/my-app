@@ -20,7 +20,7 @@
 }
 .fullHome-bhk {
   display: flex;
-  width: 50%;
+  width: 80%;
   height: 18%;
   align-items: center;
   background: rgb(255, 252, 250);
@@ -39,6 +39,7 @@
   color: rgb(32, 32, 32);
   filter: drop-shadow(0 0.5rem 0.75rem rgb(208, 205, 205));
   border: 1px solid var(--buttonBack);
+  padding-left: 25px;
 }
 .kitchen-parent {
   display: flex;
@@ -100,17 +101,14 @@
   border: 1px solid black;
 }
 .selector {
-  position: relative;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: white;
   border: 1px solid black;
-  left: 10%;
-  top: 5%;
 }
 .fullHome-bhk span:nth-child(2) {
-  margin-left: 75px;
+  margin-left: 25px;
 }
 .selector .inner-circle {
   width: 15px;
