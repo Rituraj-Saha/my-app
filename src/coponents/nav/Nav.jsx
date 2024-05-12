@@ -78,7 +78,7 @@ const Nav = () => {
               > */}
               <Link to="/contact" scroll={true}>
                 {" "}
-               Contact
+                Contact
               </Link>
               {/* Price Calculator */}
               {/* </ScrollLink> */}
@@ -91,7 +91,11 @@ const Nav = () => {
         <div className="container">
           <Routes>
             <Route exact path="/my-app/" element={<Home />}></Route>
-            <Route exact path="/offerings" element={<Offering />}></Route>
+            <Route
+              exact
+              path="/offerings"
+              element={<Home scrollToElement="offerings" />}
+            ></Route>
             <Route
               exact
               path="/howItWorks"

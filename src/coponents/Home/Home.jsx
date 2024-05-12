@@ -32,6 +32,14 @@ const Home = (props) => {
         duration: 500,
         offset: -300,
       });
+    if (props.scrollToElement == "offerings")
+      scroller.scrollTo("offerings", {
+        to: "offerings",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
   });
   return (
     <>
@@ -51,20 +59,18 @@ const Home = (props) => {
                 <span>Experiance unmatched quality & timely delivery with</span>
                 <span>HomeCrafter</span>
               </div>
-              <div className="right">
-                {/* <GetQuote /> */}
-              </div>
+              <div className="right">{/* <GetQuote /> */}</div>
               <div className="wappBar">
                 <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
               </div>
             </div>
             <BadgeSection />
             <TaglineSectionOne />
-            <SlidingPanel />
+            <SlidingPanel id="offerings" />
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}
-            <Contact id="contact"/>
+            <Contact id="contact" />
           </div>
         </>
       )}

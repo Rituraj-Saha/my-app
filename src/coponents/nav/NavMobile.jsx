@@ -14,28 +14,59 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
 import HomeMobile from "../Home/HomeMobile";
+import CloseIcon from "@mui/icons-material/Close";
 const NavMobile = () => {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
-
+  function setLinkElement(text) {
+    if (text == "Interior") {
+      return (
+        <Link to="/my-app/">
+          {" "}
+          <ListItemText primary={text} />
+        </Link>
+      );
+    }
+    if (text == "Offerings") {
+      return (
+        <Link to="/offerings">
+          {" "}
+          <ListItemText primary={text} />
+        </Link>
+      );
+    }
+    if (text == "How it Works") {
+      return (
+        <Link to="/howItWorks">
+          {" "}
+          <ListItemText primary={text} />
+        </Link>
+      );
+    }
+    if (text == "Contact") {
+      return (
+        <Link to="/contact">
+          {" "}
+          <ListItemText primary={text} />
+        </Link>
+      );
+    }
+  }
   const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
-        {["Interior", "Offerings", "How it Works", "Price Calculator"].map(
+        {["Interior", "Offerings", "How it Works", "Contact"].map(
           (text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemIcon>
+                {/* <ListItemIcon>
                   {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                </ListItemIcon>
+                </ListItemIcon> */}
 
-                <Link to="/my-app/">
-                  {" "}
-                  <ListItemText primary={text} />
-                </Link>
+                {setLinkElement(text)}
               </ListItemButton>
             </ListItem>
           )
@@ -69,11 +100,30 @@ const NavMobile = () => {
         </div>
 
         <Drawer open={open} onClose={toggleDrawer(false)}>
+          <div onClick={toggleDrawer(false)} className="closeDraweBtn">
+            <CloseIcon />
+          </div>
           {DrawerList}
         </Drawer>
         <div className="mobContainer">
           <Routes>
             <Route exact path="/my-app/" element={<HomeMobile />}></Route>
+            <Route exact path="/my-app/" element={<HomeMobile />}></Route>
+            <Route
+              exact
+              path="/offerings"
+              element={<HomeMobile scrollToElement="offerings" />}
+            ></Route>
+            <Route
+              exact
+              path="/howItWorks"
+              element={<HomeMobile scrollToElement="howItWorks" />}
+            ></Route>
+            <Route
+              exact
+              path="/contact"
+              element={<HomeMobile scrollToElement="contact" />}
+            ></Route>
           </Routes>
         </div>
       </div>

@@ -8,7 +8,7 @@ import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
 import PriceCal from "../../price_calculator/PriceCal";
-
+import { Element } from "react-scroll";
 register();
 
 const SlidingPanel = () => {
@@ -100,66 +100,73 @@ const SlidingPanel = () => {
   }, []);
   function returnNoOfSlide() {}
   return (
-    <div className="sliding_panel_parent">
-      <div className={useIsMobile()?"sliding_panel_heading_mobile":"sliding_panel_heading"}>
-        <span>Homes for every style</span>
-        <span>
-          Superior finshes, trendy designs and quality modules at affordable
-          prices
-        </span>
-      </div>
+    <Element name="offerings" className="offerings" id="offerings">
+      <div className="sliding_panel_parent">
+        <div
+          className={
+            useIsMobile()
+              ? "sliding_panel_heading_mobile"
+              : "sliding_panel_heading"
+          }
+        >
+          <span>Homes for every style</span>
+          <span>
+            Superior finshes, trendy designs and quality modules at affordable
+            prices
+          </span>
+        </div>
 
-      {useIsMobile() ? (
-        <>
-          {openDialog ? (
-            <div className="alertdialog-mobile">
-              <div className="alertdialog_container-mobile">
-                <PriceCal />
-                <button
-                  onClick={() => setOpenDialog(false)}
-                  className="taglinespan3_alertdialog_cls_button-mobile"
-                >
-                  <CancelIcon
-                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
-                  />
-                </button>
+        {useIsMobile() ? (
+          <>
+            {openDialog ? (
+              <div className="alertdialog-mobile">
+                <div className="alertdialog_container-mobile">
+                  <PriceCal />
+                  <button
+                    onClick={() => setOpenDialog(false)}
+                    className="taglinespan3_alertdialog_cls_button-mobile"
+                  >
+                    <CancelIcon
+                      sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </>
-      ) : (
-        <>
-          {openDialog ? (
-            <div className="alertdialog">
-              <div className="alertdialog_container">
-              <PriceCal />
-                <button
-                  onClick={() => setOpenDialog(false)}
-                  className="taglinespan3_alertdialog_cls_button"
-                >
-                  <CancelIcon
-                    sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
-                  />
-                </button>
+            ) : (
+              <></>
+            )}
+          </>
+        ) : (
+          <>
+            {openDialog ? (
+              <div className="alertdialog">
+                <div className="alertdialog_container">
+                  <PriceCal />
+                  <button
+                    onClick={() => setOpenDialog(false)}
+                    className="taglinespan3_alertdialog_cls_button"
+                  >
+                    <CancelIcon
+                      sx={{ color: "rgb(241, 112, 112)", fontSize: 30 }}
+                    />
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <></>
-          )}
-        </>
-      )}
-      <swiper-container
-        ref={swiperElRef}
-        init="false"
-        slides-per-view={useIsMobile() ? "1" : "3"}
-        navigation="true"
-        pagination="true"
-        class="my_swiper"
-        spaceBetween="40"
-      >
-        {/* {mySlides.map((slide) => {
+            ) : (
+              <></>
+            )}
+          </>
+        )}
+        <swiper-container
+          ref={swiperElRef}
+          init="false"
+          slides-per-view={useIsMobile() ? "1" : "3"}
+          navigation="true"
+          pagination="true"
+          class="my_swiper"
+          spaceBetween="40"
+        >
+          {/* {mySlides.map((slide) => {
           console.log("slide title: " + slide.title);
           <swiper-slide>
             <SlideCard
@@ -169,14 +176,15 @@ const SlidingPanel = () => {
             />
           </swiper-slide>;
         })} */}
-        {mySlides2}
+          {mySlides2}
 
-        {/* <swiper-slide>Slide 1</swiper-slide>
+          {/* <swiper-slide>Slide 1</swiper-slide>
         <swiper-slide>Slide 2</swiper-slide>
         <swiper-slide>Slide 3</swiper-slide>
         <swiper-slide>Slide 4</swiper-slide> */}
-      </swiper-container>
-    </div>
+        </swiper-container>
+      </div>
+    </Element>
   );
 };
 

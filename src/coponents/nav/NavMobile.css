@@ -25,3 +25,24 @@
   height: 100vh;
   /* background-color: #576e9c; */
 }
+.closeDraweBtn {
+  position: absolute;
+  border-radius: 100%;
+  display: flex;
+  left: 80%;
+  height: 40px;
+  width: 40px;
+  top: 1%;
+  background-color: red;
+  color: white;
+  padding: auto;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+.MuiButtonBase-root {
+  color: white !important;
+}
