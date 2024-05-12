@@ -1,0 +1,49 @@
+.contact-parent {
+  display: flex;
+  width: 100%;
+
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  background-image: url(../../res/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 25px;
+}
+.contact-parent-mobile {
+  display: flex;
+  width: 100%;
+  padding-bottom: 25px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45px;
+  flex-direction: column;
+  background-image: url(../../res/wave.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-parent > .left {
+  display: flex;
+  flex-direction: column;
+}
+.contact-parent > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-parent-mobile > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contactHeading {
+  text-align: start;
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 25px;
+}
+.contactHeading span {
+  font-size: 30px;
+}

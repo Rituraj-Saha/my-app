@@ -25,7 +25,6 @@ nav {
   min-height: 100vh;
   min-width: 100%;
   margin-top: 9vh;
-  margin-bottom: 150px;
 }
 nav > span:nth-child(1) {
   flex: 0.3;
