@@ -1,7 +1,12 @@
 import { React, useRef, useEffect, useState } from "react";
 import "./Slidingpanel.css";
 import { register } from "swiper/element/bundle";
-import SampleImg from "../../../res/interior_home.jpg";
+import SampleImg_basic from "../../../res/interior_home.jpg";
+import SampleImg_wooden_br from "../../../res/bedroom_wooden.jpg"
+import SampleImg_indian_br from "../../../res/Indian_bedroom.jpg"
+import SampleImg_cane_lvr from "../../../res/cane_furniture_living.jpg"
+import SampleImg_modular_ktc from "../../../res/kitchen.jpg"
+
 import SlideCard from "./SlideCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
@@ -23,7 +28,7 @@ const SlidingPanel = () => {
   const mySlides2 = [
     <swiper-slide>
       <SlideCard
-        image={SampleImg}
+        image={SampleImg_basic}
         title={"Monochromatic grey 2 BHK"}
         subtitle={"add cloudy hues to your space"}
         handleClick={handleClick}
@@ -31,17 +36,17 @@ const SlidingPanel = () => {
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
-        image={SampleImg}
-        title={"Monochromatic grey 2 BHK"}
-        subtitle={"add cloudy hues to your space"}
+        image={SampleImg_wooden_br}
+        title={"Magistic Wooden "}
+        subtitle={"add classy touch to your space"}
         handleClick={handleClick}
       />
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
-        image={SampleImg}
-        title={"Monochromatic grey 2 BHK"}
-        subtitle={"add cloudy hues to your space"}
+        image={SampleImg_indian_br}
+        title={"Desi delight"}
+        subtitle={"back to root"}
         handleClick={handleClick}
       />
     </swiper-slide>,
