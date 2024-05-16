@@ -22,12 +22,25 @@ const Contact = () => {
           <div className="phone-tag">+91 9674345373</div>
           <div className="email">Homecrafter@gmail.com</div>
         </div>
-        <Divider orientation="vertical" flexItem />
+        <Divider
+          orientation="vertical"
+          flexItem
+          sx={{
+            fontWeight: "bold",
+            borderWidth: "2px",
+            margin: "10px",
+          }}
+        />
         <div className="right">
           <div>
             <span>Send Us a Message</span>
           </div>
-          <TextField id="outlined-basic" label="Name" variant="outlined" />
+          <TextField
+            id="outlined-basic"
+            label="Name"
+            variant="outlined"
+            className="textInputCustom"
+          />
           <TextField id="outlined-basic" label="Email" variant="outlined" />
           <TextField id="outlined-basic" label="Phone" variant="outlined" />
           <Textarea placeholder="Type your message" minRows={2} />

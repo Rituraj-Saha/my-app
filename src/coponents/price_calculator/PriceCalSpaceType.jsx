@@ -70,34 +70,40 @@ const PriceCalSpaceType = () => {
   }, []);
   return (
     <>
-    {useIsMobile()?(<>
-      <div className="priceCalSpaceType-parent">
-      <swiper-container
-        ref={swiperElRef}
-        init="false"
-        slides-per-view="1"
-        navigation="true"
-        pagination="true"
-        class="my_swiper my-price-cal-swiper"
-        spaceBetween="50"
-      >
-        {mySlides2}
-      </swiper-container>
-    </div>
-    </>):<> <div className="priceCalSpaceType-parent">
-      <swiper-container
-        ref={swiperElRef}
-        init="false"
-        slides-per-view="2"
-        navigation="true"
-        pagination="true"
-        class="my_swiper my-price-cal-swiper"
-        spaceBetween="50"
-      >
-        {mySlides2}
-      </swiper-container>
-    </div></>}
-   
+      {useIsMobile() ? (
+        <>
+          <div className="priceCalSpaceType-parent">
+            <swiper-container
+              ref={swiperElRef}
+              init="false"
+              slides-per-view="1"
+              navigation="false"
+              pagination="true"
+              class="my_swiper my-price-cal-swiper"
+              spaceBetween="50"
+            >
+              {mySlides2}
+            </swiper-container>
+          </div>
+        </>
+      ) : (
+        <>
+          {" "}
+          <div className="priceCalSpaceType-parent">
+            <swiper-container
+              ref={swiperElRef}
+              init="false"
+              slides-per-view="2"
+              navigation="true"
+              pagination="true"
+              class="my_swiper my-price-cal-swiper"
+              spaceBetween="50"
+            >
+              {mySlides2}
+            </swiper-container>
+          </div>
+        </>
+      )}
     </>
   );
 };
