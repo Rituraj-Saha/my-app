@@ -52,17 +52,17 @@ const SlidingPanel = () => {
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
-        image={SampleImg}
-        title={"Monochromatic grey 2 BHK"}
-        subtitle={"add cloudy hues to your space"}
+        image={SampleImg_cane_lvr}
+        title={"Carishmatic Cane"}
+        subtitle={"when your living is organically twinned"}
         handleClick={handleClick}
       />
     </swiper-slide>,
     <swiper-slide>
       <SlideCard
-        image={SampleImg}
-        title={"Monochromatic grey 2 BHK"}
-        subtitle={"add cloudy hues to your space"}
+        image={SampleImg_modular_ktc}
+        title={"Modular kitchen"}
+        subtitle={"Your Smarter Arena"}
         handleClick={handleClick}
       />
     </swiper-slide>,
