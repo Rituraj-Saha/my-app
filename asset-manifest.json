@@ -1,10 +1,14 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.74cde57d.css",
-    "main.js": "/my-app/static/js/main.54e6e8b1.js",
+    "main.js": "/my-app/static/js/main.5ffe2a04.js",
     "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
     "static/media/slidingWordrobe.png": "/my-app/static/media/slidingWordrobe.06a2b52ebfe474ae0923.png",
+    "static/media/bedroom_wooden.jpg": "/my-app/static/media/bedroom_wooden.c7ccb57d33550441532a.jpg",
     "static/media/interior_home.jpg": "/my-app/static/media/interior_home.f1a398d471b32149fec9.jpg",
+    "static/media/Indian_bedroom.jpg": "/my-app/static/media/Indian_bedroom.1f456b6616e32afffda4.jpg",
+    "static/media/kitchen.jpg": "/my-app/static/media/kitchen.282aa06848718363f769.jpg",
+    "static/media/cane_furniture_living.jpg": "/my-app/static/media/cane_furniture_living.eef901d66dfb2762db04.jpg",
     "static/media/logo.svg": "/my-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/warrenty.avif": "/my-app/static/media/warrenty.84bbed5d0aeb8877504d.avif",
     "static/media/transparentprice.avif": "/my-app/static/media/transparentprice.cd26aad52cfee100f7d1.avif",
@@ -12,11 +16,11 @@
     "index.html": "/my-app/index.html",
     "static/media/wave.svg": "/my-app/static/media/wave.05c0ad82f993e1bc7960.svg",
     "main.74cde57d.css.map": "/my-app/static/css/main.74cde57d.css.map",
-    "main.54e6e8b1.js.map": "/my-app/static/js/main.54e6e8b1.js.map",
+    "main.5ffe2a04.js.map": "/my-app/static/js/main.5ffe2a04.js.map",
     "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74cde57d.css",
-    "static/js/main.54e6e8b1.js"
+    "static/js/main.5ffe2a04.js"
   ]
 }
