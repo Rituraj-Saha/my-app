@@ -205,14 +205,20 @@ const Stage3 = () => {
             <span>A: </span>
             <select onChange={onOptionChangeHandlerForA}>
               <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
               <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
           <div className="kit-mes-selector">
             <span>B: </span>
             <select onChange={onOptionChangeHandlerForB}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
         </div>
@@ -224,22 +230,31 @@ const Stage3 = () => {
           <div className="kit-mes-selector">
             <span>A: </span>
             <select onChange={onOptionChangeHandlerForA}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
           <div className="kit-mes-selector">
             <span>B: </span>
             <select onChange={onOptionChangeHandlerForB}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
           <div className="kit-mes-selector">
             <span>C: </span>
             <select onChange={onOptionChangeHandlerForC}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
         </div>
@@ -251,8 +266,11 @@ const Stage3 = () => {
           <div className="kit-mes-selector">
             <span>A: </span>
             <select onChange={onOptionChangeHandlerForA}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
         </div>
@@ -264,15 +282,21 @@ const Stage3 = () => {
           <div className="kit-mes-selector">
             <span>A: </span>
             <select onChange={onOptionChangeHandlerForA}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
           <div className="kit-mes-selector">
             <span>B: </span>
             <select onChange={onOptionChangeHandlerForB}>
-              <option value="6ft">6 ft</option>
-              <option value="8ft">8 ft</option>
+              <option value="6 ft">6 ft</option>
+              <option value="7 ft">7 ft</option>
+              <option value="8 ft">8 ft</option>
+              <option value="9 ft">9 ft</option>
+              <option value="10 ft">10 ft</option>
             </select>
           </div>
         </div>

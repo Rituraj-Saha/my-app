@@ -13,6 +13,7 @@ import Stage2 from "./Stage2";
 import Stage3 from "./Stage3";
 import Stage4 from "./Stage4";
 import Stage5 from "./Stage5";
+import Stage6 from "./Stage6";
 const PriceCal = () => {
   const dispatch = useDispatch();
 
@@ -41,6 +42,8 @@ const PriceCal = () => {
         return <Stage4 />;
       case 5:
         return <Stage5 />;
+      case 6:
+        return <Stage6 />;
       default:
         return <PriceCalSpaceType />;
     }

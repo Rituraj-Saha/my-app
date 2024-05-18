@@ -11,7 +11,7 @@ export const priceCalStageSlice = createSlice({
     nextStagePriceCal: (state, action) => {
       state.priceCalStage = state.priceCalStage + 1;
 
-      if (state.priceCalStage > 5) {
+      if (state.priceCalStage > 6) {
         state.priceCalStage = 1;
       }
     },
