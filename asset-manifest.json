@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.74cde57d.css",
-    "main.js": "/my-app/static/js/main.5ffe2a04.js",
+    "main.css": "/my-app/static/css/main.54651eed.css",
+    "main.js": "/my-app/static/js/main.10198a43.js",
     "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
     "static/media/slidingWordrobe.png": "/my-app/static/media/slidingWordrobe.06a2b52ebfe474ae0923.png",
     "static/media/bedroom_wooden.jpg": "/my-app/static/media/bedroom_wooden.c7ccb57d33550441532a.jpg",
@@ -15,12 +15,12 @@
     "static/media/personalized.avif": "/my-app/static/media/personalized.586cc3ab5eb826c59196.avif",
     "index.html": "/my-app/index.html",
     "static/media/wave.svg": "/my-app/static/media/wave.05c0ad82f993e1bc7960.svg",
-    "main.74cde57d.css.map": "/my-app/static/css/main.74cde57d.css.map",
-    "main.5ffe2a04.js.map": "/my-app/static/js/main.5ffe2a04.js.map",
+    "main.54651eed.css.map": "/my-app/static/css/main.54651eed.css.map",
+    "main.10198a43.js.map": "/my-app/static/js/main.10198a43.js.map",
     "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.74cde57d.css",
-    "static/js/main.5ffe2a04.js"
+    "static/css/main.54651eed.css",
+    "static/js/main.10198a43.js"
   ]
 }
