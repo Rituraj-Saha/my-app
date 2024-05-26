@@ -28,6 +28,7 @@ import parallelKitchenMes from "../../res/parelledMes.png";
 import PriceEstematorCard from "./PriceEstematorCard";
 import SlidingType from "../../res/slidingWordrobe.png";
 import SwingType from "../../res/swing.jpg";
+import useIsMobile from "../../util/useIsMobile";
 const Stage3 = () => {
   const livRoomDispatch = useDispatch();
   const kitchenDispatch = useDispatch();
@@ -303,9 +304,9 @@ const Stage3 = () => {
       );
     }
   }
-  function wordrobeTypeProvider() {
+  function wordrobeTypeProvider(parentClassBaesedOnView) {
     return (
-      <div className="worddrobe-type-provider">
+      <div className={parentClassBaesedOnView}>
         <PriceEstematorCard
           image={SlidingType}
           spaceType="sliding"
@@ -322,7 +323,7 @@ const Stage3 = () => {
     );
   }
 
-  function content() {
+  function content(parentClassBaesedOnView) {
     switch (typeOfSpace) {
       case "Full Home": {
         return (
@@ -439,11 +440,19 @@ const Stage3 = () => {
         );
       }
       case "Wardrobe": {
-        return <>{wordrobeTypeProvider()}</>;
+        return <>{wordrobeTypeProvider(parentClassBaesedOnView)}</>;
       }
     }
   }
-  return <>{content()}</>;
+  return (
+    <>
+      {content(
+        useIsMobile()
+          ? "worddrobe-type-provider-mobile"
+          : "worddrobe-type-provider"
+      )}
+    </>
+  );
 };
 
 export default Stage3;

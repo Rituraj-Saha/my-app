@@ -14,16 +14,18 @@
   height: 100%;
   background-color: white;
   display: flex;
-
+  flex: 1;
   margin: auto;
   margin-top: 20px;
   flex-direction: column;
   filter: drop-shadow(0 0.5rem 0.75rem rgb(152, 152, 152));
   border-radius: 10px;
+  overflow: auto;
 }
 .price-cal-top {
   display: flex;
-  height: 10%;
+  /* height: 10%; */
+  flex: 0.1;
   background-color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
@@ -55,15 +57,18 @@
 }
 .priceCalContent {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
+  flex: 0.8;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 .price-cal-button {
   display: flex;
-  height: 10%;
+  /* height: 10%; */
+  flex: 0.1;
   width: 100%;
   flex-direction: row;
   gap: 40%;
@@ -92,4 +97,10 @@
   padding-bottom: 10px;
   border-radius: 25px;
   cursor: pointer;
+}
+.price-cal-back-none {
+  display: none;
+}
+.price-cal-next-none {
+  display: none;
 }

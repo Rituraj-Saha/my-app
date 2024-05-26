@@ -21,6 +21,7 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
+import DesignIdea from "../DesignIdeas/DesignIdea";
 const Nav = () => {
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
@@ -69,20 +70,16 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              {/* <ScrollLink
-                activeClass="active"
-                to="priceCal"
-                spy={true}
-                smooth={true}
-                duration={500}
-              > */}
               <Link to="/contact" scroll={true}>
                 {" "}
                 Contact
               </Link>
-              {/* Price Calculator */}
-              {/* </ScrollLink> */}
-              {/* <Link to="/price_calculator"> */}
+            </li>
+            <li>
+              <Link to="/design-ideas" scroll={true}>
+                {" "}
+                Design Ideas
+              </Link>
             </li>
           </ul>
           <span className="get-quote">Get Quote</span>
@@ -106,6 +103,7 @@ const Nav = () => {
               path="/contact"
               element={<Home scrollToElement="contact" />}
             ></Route>
+            <Route exact path="/design-ideas" element={<DesignIdea />}></Route>
           </Routes>
           {/* <Home />
       <BadgeSection /> */}

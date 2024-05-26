@@ -3,17 +3,19 @@ import { Element } from "react-scroll";
 import "./PriceCal.css";
 import PriceCalSpaceType from "./PriceCalSpaceType";
 import Divider from "@mui/material/Divider";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+
 import {
   nextStagePriceCal,
   backStagePriceCal,
 } from "../../features/priceCalState/priceCalStageSlice";
-import { useSelector } from "react-redux";
+
 import Stage2 from "./Stage2";
 import Stage3 from "./Stage3";
 import Stage4 from "./Stage4";
 import Stage5 from "./Stage5";
 import Stage6 from "./Stage6";
+import useContactValidator from "../../util/useContactValidator";
 const PriceCal = () => {
   const dispatch = useDispatch();
 
@@ -28,6 +30,7 @@ const PriceCal = () => {
     dispatch(backStagePriceCal());
     // console.log("priceCal on Back:" + priceCalStage);
   };
+  var validate = useContactValidator();
   function stageSelctor() {
     switch (priceCalStage) {
       case 1:
@@ -43,7 +46,9 @@ const PriceCal = () => {
       case 5:
         return <Stage5 />;
       case 6:
-        return <Stage6 />;
+        return (
+          <>{validate ? <Stage6 /> : <span>Please check the fields</span>}</>
+        );
       default:
         return <PriceCalSpaceType />;
     }
@@ -102,10 +107,20 @@ const PriceCal = () => {
         <Divider></Divider>
         <div className="priceCalContent">{stageSelctor()}</div>
         <div className="price-cal-button">
-          <div className="price-cal-back" onClick={backButtonHandler}>
+          <div
+            className={
+              priceCalStage == 5 ? "price-cal-back-none" : "price-cal-back"
+            }
+            onClick={backButtonHandler}
+          >
             Back
           </div>
-          <div className="price-cal-next" onClick={nextButtonHandler}>
+          <div
+            className={
+              priceCalStage == 5 ? "price-cal-next-none" : "price-cal-next"
+            }
+            onClick={nextButtonHandler}
+          >
             Next
           </div>
         </div>

@@ -88,7 +88,7 @@
 }
 .kitchenType img {
   height: 70%;
-  width: 100%;
+  width: 70%;
 }
 .kitchenTypeParent > .selector {
   position: relative;

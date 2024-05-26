@@ -8,72 +8,84 @@ import useIsMobile from "../../util/useIsMobile";
 const HowItWorks = () => {
   return (
     <Element name="howItWorks" className="howItWorks" id="howItWorks">
-      <div className={useIsMobile()?"how-it-works-working-parent-mobile":"how-it-works-working-parent"}>
+      <div
+        className={
+          useIsMobile()
+            ? "how-it-works-working-parent-mobile"
+            : "how-it-works-working-parent"
+        }
+      >
         <span>Home Make Over In 4 Easy Steps</span>
-        <div className={useIsMobile()?"badjes-mobile":"badjes"}>
-        {/* <Stack direction="row" spacing={8}> */}
-          <div className={useIsMobile()?"avtar-card-mobile":"avtar-card"}>
+        <div className={useIsMobile() ? "badjes-mobile" : "badjes"}>
+          {/* <Stack direction="row" spacing={8}> */}
+          <div className={useIsMobile() ? "avtar-card-mobile" : "avtar-card"}>
             <Avatar
               alt="Remy Sharp"
               src={Sample}
               className="how-it-works-badges"
             />
             <div className="avtar-title-sub-wrap">
-            <span>Meet our designer</span>
-            <span>
-              Our Homecrafter team will reachout to you to understand your
-              design vision both asthetically & functionally.
-            </span>
+              <strong>
+                <span>Get A Quote & Fill the Contact Form</span>
+              </strong>
+              {/* <span>
+                Our Homecrafter team will reachout to you to understand your
+                design vision both asthetically & functionally.
+              </span> */}
             </div>
           </div>
-          <div className={useIsMobile()?"avtar-card-mobile":"avtar-card"}>
+          <div className={useIsMobile() ? "avtar-card-mobile" : "avtar-card"}>
             <Avatar
               alt="Travis Howard"
               src={Sample}
               className="how-it-works-badges"
             />
             <div className="avtar-title-sub-wrap">
-              <span>Meet our designer</span>
-              <span>
+              <strong>
+                <span>Scedule A meeting with our designes</span>
+              </strong>
+              {/* <span>
                 Our Homecrafter team will reachout to you to understand your
                 design vision both asthetically & functionally.
-              </span>
+              </span> */}
             </div>
-              
           </div>
-          <div className={useIsMobile()?"avtar-card-mobile":"avtar-card"}>
+          <div className={useIsMobile() ? "avtar-card-mobile" : "avtar-card"}>
             <Avatar
               alt="Cindy Baker"
               src={Sample}
               className="how-it-works-badges"
             />
-              <div className="avtar-title-sub-wrap"> 
-              <span>Meet our designer</span>
-              <span>
+            <div className="avtar-title-sub-wrap">
+              <strong>
+                {" "}
+                <span>Site visit & Finilize the contract</span>
+              </strong>
+              {/* <span>
                 Our Homecrafter team will reachout to you to understand your
                 design vision both asthetically & functionally.
-              </span>
+              </span> */}
             </div>
-           
           </div>
-          <div className={useIsMobile()?"avtar-card-mobile":"avtar-card"}>
+          <div className={useIsMobile() ? "avtar-card-mobile" : "avtar-card"}>
             {" "}
             <Avatar
               alt="Cindy Baker"
               src={Sample}
               className="how-it-works-badges"
             />
-            <div className="avtar-title-sub-wrap"> 
-            <span>Meet our designer</span>
-            <span>
-              Our Homecrafter team will reachout to you to understand your
-              design vision both asthetically & functionally.
-            </span>
+            <div className="avtar-title-sub-wrap">
+              <span>
+                <strong>Your dream home is Ready To Deliver</strong>
+              </span>
+              {/* <span>
+                Our Homecrafter team will reachout to you to understand your
+                design vision both asthetically & functionally.
+              </span> */}
             </div>
           </div>
-        {/* </Stack> */}
+          {/* </Stack> */}
         </div>
-        
       </div>
     </Element>
   );

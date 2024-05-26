@@ -1,0 +1,24 @@
+.deignIdeaParent {
+  display: flex;
+  flex-direction: column;
+  height: 91vh;
+  width: 100%;
+}
+
+.topbar {
+  display: flex;
+  position: fixed;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  background-color: aqua;
+  width: 100%;
+}
+.bottomPanel {
+  width: 50%;
+  height: 80px;
+  background-color: aqua;
+  position: fixed;
+  top: 80%;
+  left: 25%;
+}

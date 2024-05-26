@@ -1,14 +1,14 @@
 .stage5parent {
   display: flex;
-  height: 50%;
+  height: 80%;
   width: 100%;
 }
 .stage5parent > .getQuote {
   padding-top: 10px;
 }
-.stage5parent > .getQuote > .get-coute-button {
+/* .stage5parent > .getQuote > .get-coute-button {
   display: none;
 }
 .stage5parent > .getQuote > .policySpan {
   display: none;
-}
+} */

@@ -10,7 +10,7 @@
 .package-chip {
   display: flex;
   width: 60%;
-  height: 15%;
+
   background: rgb(255, 252, 250);
   color: rgb(32, 32, 32);
   filter: drop-shadow(0 0.5rem 0.75rem rgb(208, 205, 205));
@@ -20,6 +20,7 @@
   justify-content: center;
   padding-left: 60px;
   cursor: pointer;
+  text-align: start;
 }
 .pkg-selector {
   height: 40px;

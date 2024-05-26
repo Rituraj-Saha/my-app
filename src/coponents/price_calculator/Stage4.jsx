@@ -27,7 +27,12 @@ const Stage4 = () => {
           ></div>
         </div>
         <span className="pkg-title">Standard</span>
-        <span className="pkg-desc">Best fit for daily usage</span>
+        <span className="pkg-desc">
+          Best fit for daily usage.
+          <li> BWR grade ply</li>
+          <li>Laminate</li>
+          <li>Hardware- Ebco</li>
+        </span>
       </div>
       <div
         className="package-chip"
@@ -43,23 +48,30 @@ const Stage4 = () => {
           ></div>
         </div>
         <span className="pkg-title">Premium</span>
-        <span className="pkg-desc">Give your interior a premium look</span>
+        <span className="pkg-desc">Give your interior a premium look.</span>
+
+        <li>BWR grade ply</li>
+        <li>Laminate/Acrylic/spray paint finish</li>
+        <li>Hardware- Ebco, Hettich, Haffle</li>
       </div>
       <div
         className="package-chip"
         onClick={() => {
-          handlePkgSelect("Lauxary");
+          handlePkgSelect("Luxary");
         }}
       >
         <div className="pkg-selector">
           <div
-            className={
-              cuurentSelectedPkg == "Lauxary" ? "pkg-inner-circle" : ""
-            }
+            className={cuurentSelectedPkg == "Luxary" ? "pkg-inner-circle" : ""}
           ></div>
         </div>
         <span className="pkg-title">Lauxary</span>
-        <span className="pkg-desc">Add a touch of Lauxary</span>
+        <span className="pkg-desc">
+          Add a touch of Luxary.
+          <li> BWP grade ply</li>
+          <li>Duco/veneer/PU/Polycoat finish</li>
+          <li> Hardware-Ebco Hettich Haffle</li>
+        </span>
       </div>
     </div>
   );
