@@ -6,7 +6,6 @@ import SampleImg_wooden_br from "../../../res/bedroom_wooden.jpg"
 import SampleImg_indian_br from "../../../res/Indian_bedroom.jpg"
 import SampleImg_cane_lvr from "../../../res/cane_furniture_living.jpg"
 import SampleImg_modular_ktc from "../../../res/kitchen.jpg"
-
 import SlideCard from "./SlideCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
@@ -14,11 +13,14 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
 import PriceCal from "../../price_calculator/PriceCal";
 import { Element } from "react-scroll";
+import { useDispatch } from "react-redux";
+import { resetStore } from '../../../app/action';
+
 register();
 
 const SlidingPanel = () => {
   const [openDialog, setOpenDialog] = useState(false);
-
+  const resetDispatch = useDispatch();
   const handleClick = () => {
     setOpenDialog(true);
   };
@@ -128,7 +130,9 @@ const SlidingPanel = () => {
                 <div className="alertdialog_container-mobile">
                   <PriceCal />
                   <button
-                    onClick={() => setOpenDialog(false)}
+                    onClick={() =>{ 
+                      resetDispatch(resetStore())
+                      setOpenDialog(false)}}
                     className="taglinespan3_alertdialog_cls_button-mobile"
                   >
                     <CancelIcon
@@ -148,7 +152,9 @@ const SlidingPanel = () => {
                 <div className="alertdialog_container">
                   <PriceCal />
                   <button
-                    onClick={() => setOpenDialog(false)}
+                    onClick={() => {
+                      resetDispatch(resetStore())
+                      setOpenDialog(false)}}
                     className="taglinespan3_alertdialog_cls_button"
                   >
                     <CancelIcon

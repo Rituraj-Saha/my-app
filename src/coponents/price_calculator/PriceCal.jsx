@@ -47,7 +47,7 @@ const PriceCal = () => {
         return <Stage5 />;
       case 6:
         return (
-          <>{validate ? <Stage6 /> : <span>Please check the fields</span>}</>
+          <Stage6 /> 
         );
       default:
         return <PriceCalSpaceType />;
