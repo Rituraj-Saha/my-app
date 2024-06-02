@@ -3,7 +3,25 @@ import TextField from "@mui/material/TextField";
 import Textarea from "@mui/joy/Textarea";
 import Button from "@mui/material/Button";
 import useIsMobile from "../../util/useIsMobile";
+import useSendMail from "../../util/useSendMail";
+import { useRef } from "react";
 const ContactForm = () => {
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const phoneRef = useRef("");
+  const messageRef = useRef("");
+  const SendMail = () => {
+    useSendMail(
+      "Name: " +
+        nameRef.current.value +
+        "Email: " +
+        emailRef.current.value +
+        "Phone Number: " +
+        phoneRef.current.value +
+        "Message: " +
+        messageRef.current.value
+    );
+  };
   return (
     <div
       style={{
@@ -35,6 +53,7 @@ const ContactForm = () => {
           style: { color: "#fff" },
         }}
         InputProps={{ style: { color: "#fff" } }}
+        inputRef={nameRef}
       />
       <TextField
         id="outlined-basic"
@@ -53,6 +72,7 @@ const ContactForm = () => {
           style: { color: "#fff" },
         }}
         InputProps={{ style: { color: "#fff" } }}
+        inputRef={emailRef}
       />
       <TextField
         id="outlined-basic"
@@ -71,6 +91,7 @@ const ContactForm = () => {
           style: { color: "#fff" },
         }}
         InputProps={{ style: { color: "#fff" } }}
+        inputRef={phoneRef}
       />
       <Textarea
         placeholder="Type your message"
@@ -88,6 +109,8 @@ const ContactForm = () => {
           style: { color: "#fff" },
         }}
         InputProps={{ style: { color: "#fff" } }}
+        slotProps={{ input: { messageRef } }}
+        // inputRef={messageRef}
       />
       <Button
         variant="contained"
@@ -97,6 +120,7 @@ const ContactForm = () => {
           },
           backgroundColor: "var(--buttonBack)",
         }}
+        onClick={SendMail}
       >
         Send
       </Button>

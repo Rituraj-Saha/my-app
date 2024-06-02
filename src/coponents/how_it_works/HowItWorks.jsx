@@ -8,6 +8,7 @@ import useIsMobile from "../../util/useIsMobile";
 import ContactForm from "../../res/how_it_works_svg/contact-form-svg.svg";
 import Meeting from "../../res/how_it_works_svg/engineer-worker-svgrepo-com.svg";
 import Visit from "../../res/how_it_works_svg/stalker-watch-observe-person-svgrepo-com.svg";
+import Ok from "../../res/how_it_works_svg/ok-svgrepo-com.svg";
 const HowItWorks = () => {
   return (
     <Element name="howItWorks" className="howItWorks" id="howItWorks">
@@ -159,7 +160,7 @@ const HowItWorks = () => {
             </div>
             <Avatar
               alt="Cindy Baker"
-              src={Sample}
+              src={Ok}
               className="how-it-works-badges"
             />
             <div className="avtar-title-sub-wrap">

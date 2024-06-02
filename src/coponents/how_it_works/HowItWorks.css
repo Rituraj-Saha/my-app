@@ -48,7 +48,7 @@
 .avtar-card {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   gap: 16px;
   border: 1px solid rgb(187, 122, 122);
