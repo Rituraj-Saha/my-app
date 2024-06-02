@@ -10,6 +10,8 @@ import SlidingPanel from "./SlidingPanel/SlidingPanel";
 import HowItWorks from "../how_it_works/HowItWorks";
 import { useLocation } from "react-router-dom";
 import { Element, scroller } from "react-scroll";
+import ContactForm from "../ContactUs/ContactForm";
+import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import Contact from "../ContactUs/Contact";
 const Home = (props) => {
   const { state } = useLocation();
@@ -40,6 +42,14 @@ const Home = (props) => {
         duration: 500,
         offset: -300,
       });
+    if (props.scrollToElement == "price-calculator-home")
+      scroller.scrollTo("price-calculator-home", {
+        to: "price-calculator-home",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
   });
   return (
     <>
@@ -59,7 +69,9 @@ const Home = (props) => {
                 <span>Experiance unmatched quality & timely delivery with</span>
                 <span>HomeCrafter</span>
               </div>
-              <div className="right">{/* <GetQuote /> */}</div>
+              <div className="right">
+                <ContactForm />
+              </div>
               <div className="wappBar">
                 <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
               </div>
@@ -70,6 +82,7 @@ const Home = (props) => {
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}
+            <PriceCalculatorHome id="price-calculator-home" />
             <Contact id="contact" />
           </div>
         </>

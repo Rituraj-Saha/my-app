@@ -70,6 +70,12 @@ const Nav = () => {
               </Link>
             </li>
             <li>
+              <Link to="/price-calculator-home" scroll={"#price-calculator-home"}>
+                {" "}
+                Price Calculator
+              </Link>
+            </li>
+            <li>
               <Link to="/contact" scroll={true}>
                 {" "}
                 Contact
@@ -102,6 +108,11 @@ const Nav = () => {
               exact
               path="/contact"
               element={<Home scrollToElement="contact" />}
+            ></Route>
+            <Route
+              exact
+              path="/price-calculator-home"
+              element={<Home scrollToElement="price-calculator-home" />}
             ></Route>
             <Route exact path="/design-ideas" element={<DesignIdea />}></Route>
           </Routes>

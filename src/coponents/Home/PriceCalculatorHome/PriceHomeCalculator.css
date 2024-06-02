@@ -1,0 +1,12 @@
+.priceCalculatorCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.price-calculator-home {
+  display: flex;
+  margin-top: 30px;
+  gap: 40px;
+  flex-direction: column;
+}

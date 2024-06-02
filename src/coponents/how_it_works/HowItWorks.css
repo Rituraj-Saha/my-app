@@ -6,14 +6,13 @@
   flex-direction: column;
   gap: 25px;
 }
-.how-it-works-working-parent >span:nth-child(1){
+.how-it-works-working-parent > span:nth-child(1) {
   font-size: 30px;
 }
-.how-it-works-working-parent-mobile >span:nth-child(1){
+.how-it-works-working-parent-mobile > span:nth-child(1) {
   font-size: 25px;
 }
-.how-it-works-working-parent-mobile{
-  
+.how-it-works-working-parent-mobile {
   margin-top: 30%;
   align-items: center;
   justify-content: center;
@@ -21,26 +20,27 @@
   flex-direction: column;
   gap: 25px;
 }
-.badjes{
+.badjes {
   display: flex;
   width: 80%;
   align-items: center;
   justify-content: center;
 }
-.badjes-mobile{
+.badjes-mobile {
   display: flex;
   width: 80%;
   flex-direction: column;
-  gap:20px
+  gap: 20px;
 }
 .how-it-works-badges {
-  background: rgb(160, 0, 217);
+  /* background: rgb(160, 0, 217);
   background: linear-gradient(
     76deg,
     rgba(160, 0, 217, 1) 0%,
     rgb(246, 37, 18) 47%,
     rgba(231, 13, 223, 1) 98%
-  );
+  ); */
+  border: 1px solid var(--buttonBack);
   width: 40px !important;
   height: 40px !important;
   padding: 20px;
@@ -51,6 +51,12 @@
   justify-content: center;
   flex-direction: column;
   gap: 16px;
+  border: 1px solid rgb(187, 122, 122);
+  margin: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  width: 25%;
+  height: 225px;
 }
 .avtar-card-mobile {
   display: flex;
@@ -58,7 +64,7 @@
   justify-content: center;
   gap: 16px;
 }
-.avtar-title-sub-wrap{
+.avtar-title-sub-wrap {
   padding: 15px;
   display: flex;
   flex-direction: column;
