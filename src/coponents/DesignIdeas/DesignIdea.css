@@ -1,24 +1,17 @@
-.deignIdeaParent {
+.design-ideas {
   display: flex;
   flex-direction: column;
-  height: 91vh;
-  width: 100%;
+  margin-top: 110px;
 }
-
-.topbar {
+.designIdeaPanel {
   display: flex;
-  position: fixed;
-  padding-top: 20px;
-  padding-left: 15px;
-  padding-bottom: 20px;
-  background-color: aqua;
   width: 100%;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
 }
-.bottomPanel {
-  width: 50%;
-  height: 80px;
-  background-color: aqua;
-  position: fixed;
-  top: 80%;
-  left: 25%;
+.view {
+  border: 1px solid black;
+  height: 200px;
+  width: 35% !important;
 }

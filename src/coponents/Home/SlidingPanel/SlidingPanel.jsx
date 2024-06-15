@@ -2,10 +2,10 @@ import { React, useRef, useEffect, useState } from "react";
 import "./Slidingpanel.css";
 import { register } from "swiper/element/bundle";
 import SampleImg_basic from "../../../res/interior_home.jpg";
-import SampleImg_wooden_br from "../../../res/bedroom_wooden.jpg"
-import SampleImg_indian_br from "../../../res/Indian_bedroom.jpg"
-import SampleImg_cane_lvr from "../../../res/cane_furniture_living.jpg"
-import SampleImg_modular_ktc from "../../../res/kitchen.jpg"
+import SampleImg_wooden_br from "../../../res/bedroom_wooden.jpg";
+import SampleImg_indian_br from "../../../res/Indian_bedroom.jpg";
+import SampleImg_cane_lvr from "../../../res/cane_furniture_living.jpg";
+import SampleImg_modular_ktc from "../../../res/kitchen.jpg";
 import SlideCard from "./SlideCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import GetQuote from "../../GetQuote/GetQuote";
@@ -14,7 +14,7 @@ import useIsMobile from "../../../util/useIsMobile";
 import PriceCal from "../../price_calculator/PriceCal";
 import { Element } from "react-scroll";
 import { useDispatch } from "react-redux";
-import { resetStore } from '../../../app/action';
+import { resetStore } from "../../../app/action";
 
 register();
 
@@ -73,12 +73,9 @@ const SlidingPanel = () => {
     // listen for Swiper events using addEventListener
     swiperElRef.current.addEventListener("swiperprogress", (e) => {
       const [swiper, progress] = e.detail;
-      console.log(progress);
     });
 
-    swiperElRef.current.addEventListener("swiperslidechange", (e) => {
-      console.log("slide changed");
-    });
+    swiperElRef.current.addEventListener("swiperslidechange", (e) => {});
     const swiperContainer = swiperElRef.current;
     const params = {
       injectStyles: [
@@ -130,9 +127,10 @@ const SlidingPanel = () => {
                 <div className="alertdialog_container-mobile">
                   <PriceCal />
                   <button
-                    onClick={() =>{ 
-                      resetDispatch(resetStore())
-                      setOpenDialog(false)}}
+                    onClick={() => {
+                      resetDispatch(resetStore());
+                      setOpenDialog(false);
+                    }}
                     className="taglinespan3_alertdialog_cls_button-mobile"
                   >
                     <CancelIcon
@@ -153,8 +151,9 @@ const SlidingPanel = () => {
                   <PriceCal />
                   <button
                     onClick={() => {
-                      resetDispatch(resetStore())
-                      setOpenDialog(false)}}
+                      resetDispatch(resetStore());
+                      setOpenDialog(false);
+                    }}
                     className="taglinespan3_alertdialog_cls_button"
                   >
                     <CancelIcon
@@ -177,22 +176,7 @@ const SlidingPanel = () => {
           class="my_swiper"
           spaceBetween="40"
         >
-          {/* {mySlides.map((slide) => {
-          console.log("slide title: " + slide.title);
-          <swiper-slide>
-            <SlideCard
-              image={slide.img}
-              title={slide.title}
-              subtitle={slide.subtitle}
-            />
-          </swiper-slide>;
-        })} */}
           {mySlides2}
-
-          {/* <swiper-slide>Slide 1</swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide> */}
         </swiper-container>
       </div>
     </Element>

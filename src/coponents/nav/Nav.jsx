@@ -114,7 +114,7 @@ const Nav = () => {
               path="/price-calculator-home"
               element={<Home scrollToElement="price-calculator-home" />}
             ></Route>
-            <Route exact path="/design-ideas" element={<DesignIdea />}></Route>
+            <Route exact path="/design-ideas" element={<Home scrollToElement="design-ideas" />}></Route>
           </Routes>
           {/* <Home />
       <BadgeSection /> */}

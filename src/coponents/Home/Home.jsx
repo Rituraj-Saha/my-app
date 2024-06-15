@@ -13,6 +13,7 @@ import { Element, scroller } from "react-scroll";
 import ContactForm from "../ContactUs/ContactForm";
 import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import Contact from "../ContactUs/Contact";
+import DesignIdea from "../DesignIdeas/DesignIdea";
 const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -50,6 +51,14 @@ const Home = (props) => {
         duration: 500,
         offset: -300,
       });
+      if (props.scrollToElement == "design-ideas")
+        scroller.scrollTo("design-ideas", {
+          to: "design-ideas",
+          spy: true,
+          smooth: true,
+          duration: 500,
+          offset: -300,
+        });
   });
   return (
     <>
@@ -79,6 +88,8 @@ const Home = (props) => {
             <BadgeSection />
             <TaglineSectionOne />
             <SlidingPanel id="offerings" />
+
+            <DesignIdea id="design_idea"/>
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}

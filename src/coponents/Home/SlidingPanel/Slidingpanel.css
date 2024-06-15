@@ -3,13 +3,13 @@
   width: 100vw;
   height: 65vh;
   align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 .my_swiper {
   height: 100%;
-  width: 80%;
+  width: 90%;
   align-items: center;
   justify-content: center;
 }
@@ -37,7 +37,7 @@
   font-size: 35px;
   font-weight: 600;
 }
-.sliding_panel_heading_mobile span:nth-child(1){
+.sliding_panel_heading_mobile span:nth-child(1) {
   font-size: 35px;
   font-weight: 600;
 }
@@ -45,7 +45,7 @@
   font-size: 25px;
   font-weight: 300;
 }
-.sliding_panel_heading_mobile span:nth-child(2){
+.sliding_panel_heading_mobile span:nth-child(2) {
   display: flex;
   align-items: flex-start;
   justify-content: center;
