@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.54651eed.css",
-    "main.js": "/my-app/static/js/main.10198a43.js",
+    "main.css": "/my-app/static/css/main.07885034.css",
+    "main.js": "/my-app/static/js/main.c4796b32.js",
     "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
     "static/media/slidingWordrobe.png": "/my-app/static/media/slidingWordrobe.06a2b52ebfe474ae0923.png",
     "static/media/bedroom_wooden.jpg": "/my-app/static/media/bedroom_wooden.c7ccb57d33550441532a.jpg",
@@ -9,18 +9,26 @@
     "static/media/Indian_bedroom.jpg": "/my-app/static/media/Indian_bedroom.1f456b6616e32afffda4.jpg",
     "static/media/kitchen.jpg": "/my-app/static/media/kitchen.282aa06848718363f769.jpg",
     "static/media/cane_furniture_living.jpg": "/my-app/static/media/cane_furniture_living.eef901d66dfb2762db04.jpg",
+    "static/media/engineer-worker-svgrepo-com.svg": "/my-app/static/media/engineer-worker-svgrepo-com.15363cb57c1d74f9185a87e1032fd918.svg",
+    "static/media/home-svg-pc.svg": "/my-app/static/media/home-svg-pc.1baf37c3498be9746addc8141a8db5e4.svg",
     "static/media/logo.svg": "/my-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/calculator-svg-pc.svg": "/my-app/static/media/calculator-svg-pc.102899f49c468bfb889f2a77eb749952.svg",
     "static/media/warrenty.avif": "/my-app/static/media/warrenty.84bbed5d0aeb8877504d.avif",
     "static/media/transparentprice.avif": "/my-app/static/media/transparentprice.cd26aad52cfee100f7d1.avif",
+    "static/media/wordrobe-svg-pc.svg": "/my-app/static/media/wordrobe-svg-pc.7cea60790a9c3fdaf3b3b7f2ef5793d9.svg",
     "static/media/personalized.avif": "/my-app/static/media/personalized.586cc3ab5eb826c59196.avif",
+    "static/media/contact-form-svg.svg": "/my-app/static/media/contact-form-svg.5da07d53bc556d0b87de08b350c4be18.svg",
+    "static/media/stalker-watch-observe-person-svgrepo-com.svg": "/my-app/static/media/stalker-watch-observe-person-svgrepo-com.a72c1cce594db0934059c7afa2cc7718.svg",
+    "static/media/kitchen-svg-pc.svg": "/my-app/static/media/kitchen-svg-pc.d619cec42f36d9af04a0df948def997c.svg",
+    "static/media/ok-svgrepo-com.svg": "/my-app/static/media/ok-svgrepo-com.1193f0cd0369d4a216b2c0ea5a4327be.svg",
     "index.html": "/my-app/index.html",
     "static/media/wave.svg": "/my-app/static/media/wave.05c0ad82f993e1bc7960.svg",
-    "main.54651eed.css.map": "/my-app/static/css/main.54651eed.css.map",
-    "main.10198a43.js.map": "/my-app/static/js/main.10198a43.js.map",
+    "main.07885034.css.map": "/my-app/static/css/main.07885034.css.map",
+    "main.c4796b32.js.map": "/my-app/static/js/main.c4796b32.js.map",
     "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.54651eed.css",
-    "static/js/main.10198a43.js"
+    "static/css/main.07885034.css",
+    "static/js/main.c4796b32.js"
   ]
 }
