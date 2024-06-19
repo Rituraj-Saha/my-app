@@ -3,8 +3,15 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Scale } from "@mui/icons-material";
 import { Button } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTypeOfSpace } from "../../../features/priceCalState/typeOfSpaceSlice";
 
 const PriceCalculatorHomeCard = (props) => {
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(selectTypeOfSpace(props.title));
+    return props.handleOpenDialog();
+  };
   return (
     <Card variant="outlined" sx={{ width: "25%", height: "300px" }}>
       <div
@@ -68,6 +75,7 @@ const PriceCalculatorHomeCard = (props) => {
               bgcolor: "var(--buttonBack)", // theme.palette.primary.main
             },
           }}
+          onClick={handleClick}
         >
           {" "}
           Get Price

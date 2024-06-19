@@ -114,89 +114,87 @@ const Stage2 = () => {
       }
       case "Moduler Kitchen": {
         return (
-          <>
-            <div className="kitchen-type-selector-wrapper">
-              <span>Select your Kitchen type</span>
-              <div className="kitchen-parent">
-                <div className="kitchenTypeParent">
-                  <div className="selector">
-                    <div
-                      className={
-                        mselectedKitchenType == "L Shaped" ? "inner-circle" : ""
-                      }
-                    ></div>
-                  </div>
+          <div className="kitchen-type-selector-wrapper">
+            <span>Select your Kitchen type</span>
+            <div className="kitchen-parent">
+              <div className="kitchenTypeParent">
+                <div className="selector">
                   <div
-                    className="kitchenType"
-                    onClick={() => {
-                      handleKitchenSelector("L Shaped");
-                    }}
-                  >
-                    <img src={LShapedKitchen} alt="" />
-
-                    <span>L Shaped</span>
-                  </div>
+                    className={
+                      mselectedKitchenType == "L Shaped" ? "inner-circle" : ""
+                    }
+                  ></div>
                 </div>
-                <div className="kitchenTypeParent">
-                  <div className="selector">
-                    <div
-                      className={
-                        mselectedKitchenType == "Streight" ? "inner-circle" : ""
-                      }
-                    ></div>
-                  </div>
-                  <div
-                    className="kitchenType"
-                    onClick={() => {
-                      handleKitchenSelector("Streight");
-                    }}
-                  >
-                    <img src={StreightKitchenTemp} alt="" />
+                <div
+                  className="kitchenType"
+                  onClick={() => {
+                    handleKitchenSelector("L Shaped");
+                  }}
+                >
+                  <img src={LShapedKitchen} alt="" />
 
-                    <span>Streight</span>
-                  </div>
+                  <span>L Shaped</span>
                 </div>
-                <div className="kitchenTypeParent">
-                  <div className="selector">
-                    <div
-                      className={
-                        mselectedKitchenType == "U Shaped" ? "inner-circle" : ""
-                      }
-                    ></div>
-                  </div>
+              </div>
+              <div className="kitchenTypeParent">
+                <div className="selector">
                   <div
-                    className="kitchenType"
-                    onClick={() => {
-                      handleKitchenSelector("U Shaped");
-                    }}
-                  >
-                    <img src={UshapedKitchenTemp} alt="" />
-
-                    <span>U Shaped</span>
-                  </div>
+                    className={
+                      mselectedKitchenType == "Streight" ? "inner-circle" : ""
+                    }
+                  ></div>
                 </div>
-                <div className="kitchenTypeParent">
-                  <div className="selector">
-                    <div
-                      className={
-                        mselectedKitchenType == "Parallel" ? "inner-circle" : ""
-                      }
-                    ></div>
-                  </div>
-                  <div
-                    className="kitchenType"
-                    onClick={() => {
-                      handleKitchenSelector("Parallel");
-                    }}
-                  >
-                    <img src={ParallelKitchenTemp} alt="" />
+                <div
+                  className="kitchenType"
+                  onClick={() => {
+                    handleKitchenSelector("Streight");
+                  }}
+                >
+                  <img src={StreightKitchenTemp} alt="" />
 
-                    <span>Parallel</span>
-                  </div>
+                  <span>Streight</span>
+                </div>
+              </div>
+              <div className="kitchenTypeParent">
+                <div className="selector">
+                  <div
+                    className={
+                      mselectedKitchenType == "U Shaped" ? "inner-circle" : ""
+                    }
+                  ></div>
+                </div>
+                <div
+                  className="kitchenType"
+                  onClick={() => {
+                    handleKitchenSelector("U Shaped");
+                  }}
+                >
+                  <img src={UshapedKitchenTemp} alt="" />
+
+                  <span>U Shaped</span>
+                </div>
+              </div>
+              <div className="kitchenTypeParent">
+                <div className="selector">
+                  <div
+                    className={
+                      mselectedKitchenType == "Parallel" ? "inner-circle" : ""
+                    }
+                  ></div>
+                </div>
+                <div
+                  className="kitchenType"
+                  onClick={() => {
+                    handleKitchenSelector("Parallel");
+                  }}
+                >
+                  <img src={ParallelKitchenTemp} alt="" />
+
+                  <span>Parallel</span>
                 </div>
               </div>
             </div>
-          </>
+          </div>
         );
       }
       case "Wardrobe": {

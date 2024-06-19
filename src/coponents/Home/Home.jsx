@@ -51,14 +51,14 @@ const Home = (props) => {
         duration: 500,
         offset: -300,
       });
-      if (props.scrollToElement == "design-ideas")
-        scroller.scrollTo("design-ideas", {
-          to: "design-ideas",
-          spy: true,
-          smooth: true,
-          duration: 500,
-          offset: -300,
-        });
+    if (props.scrollToElement == "design-ideas")
+      scroller.scrollTo("design-ideas", {
+        to: "design-ideas",
+        spy: true,
+        smooth: true,
+        duration: 500,
+        offset: -300,
+      });
   });
   return (
     <>
@@ -79,7 +79,7 @@ const Home = (props) => {
                 <span>HomeCrafter</span>
               </div>
               <div className="right">
-                <ContactForm />
+                <ContactForm msgVisibility="visible" />
               </div>
               <div className="wappBar">
                 <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
@@ -89,7 +89,7 @@ const Home = (props) => {
             <TaglineSectionOne />
             <SlidingPanel id="offerings" />
 
-            <DesignIdea id="design_idea"/>
+            <DesignIdea id="design_idea" />
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}

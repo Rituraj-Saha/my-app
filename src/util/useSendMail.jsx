@@ -1,11 +1,12 @@
 import emailjs from "@emailjs/browser";
-export default function useSendMail(message) {
+import swal from "sweetalert";
+export default function useSendMail(fromName, handleLoading, message) {
   emailjs
     .send(
       "service_yzia22i",
       "template_0z4gz8c",
       {
-        from_name: "rituraj10saha@gmail.com",
+        from_name: fromName,
         to_name: "Team",
         message: message,
       },
@@ -15,9 +16,12 @@ export default function useSendMail(message) {
     )
     .then(
       () => {
-        window.alert("Mail Sent Successfully.");
+        // window.alert("Mail Sent Successfully.");
+        handleLoading();
+        swal("Email Sent Successfully", "", "success");
       },
       (error) => {
+        handleLoading();
         window.alert("Failed to sent mail.");
       }
     );

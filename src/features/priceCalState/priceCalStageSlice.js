@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = {
-  priceCalStage: 1,
+  priceCalStage: 2,
 };
 
 export const priceCalStageSlice = createSlice({
@@ -11,15 +11,15 @@ export const priceCalStageSlice = createSlice({
     nextStagePriceCal: (state, action) => {
       state.priceCalStage = state.priceCalStage + 1;
 
-      if (state.priceCalStage > 6) {
-        state.priceCalStage = 1;
+      if (state.priceCalStage > 5) {
+        state.priceCalStage = 2;
       }
     },
     backStagePriceCal: (state, action) => {
       state.priceCalStage = state.priceCalStage - 1;
 
       if (state.priceCalStage == 0) {
-        state.priceCalStage = 1;
+        state.priceCalStage = 2;
       }
     },
   },
