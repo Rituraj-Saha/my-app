@@ -46,9 +46,7 @@ const PriceCal = () => {
       case 5:
         return <Stage5 />;
       case 6:
-        return (
-          <Stage6 /> 
-        );
+        return <Stage6 />;
       default:
         return <PriceCalSpaceType />;
     }
