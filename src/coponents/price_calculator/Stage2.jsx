@@ -112,7 +112,7 @@ const Stage2 = () => {
           </>
         );
       }
-      case "Moduler Kitchen": {
+      case "Modular Kitchen": {
         return (
           <div className="kitchen-type-selector-wrapper">
             <span>Select your Kitchen type</span>

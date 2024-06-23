@@ -19,8 +19,8 @@ const PriceCalSpaceType = () => {
     <swiper-slide>
       <PriceEstematorCard
         image={SampleImage}
-        spaceType="Moduler Kitchen"
-        spaceDesc="Get an approximate Costing for your moduler kitchen"
+        spaceType="Modular Kitchen"
+        spaceDesc="Get an approximate Costing for your modular kitchen"
         usedFor="priceEsetematorType"
       />
     </swiper-slide>,

@@ -432,7 +432,7 @@ const Stage3 = () => {
           </>
         );
       }
-      case "Moduler Kitchen": {
+      case "Modular Kitchen": {
         return (
           <>
             <div className="kitchen-mes-st3-parent">{kitchenMeasurement()}</div>

@@ -50,7 +50,7 @@ const PriceCalculatorHome = () => {
         <PriceCalculatorHomeCard
           image={KitchenSVGPc}
           imageright={CalcuteSvgPc}
-          title={"Moduler Kitchen"}
+          title={"Modular Kitchen"}
           subTitle={"Get an approximate costing of your luxary Kitchen"}
           handleOpenDialog={handleOpenDialog}
         ></PriceCalculatorHomeCard>
