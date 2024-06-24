@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import swal from "sweetalert";
-export default function useSendMail(fromName, handleLoading, message) {
+export default function useSendMail(fromName, handleLoading, message, usedFor) {
   emailjs
     .send(
       "service_yzia22i",
@@ -18,7 +18,8 @@ export default function useSendMail(fromName, handleLoading, message) {
       () => {
         // window.alert("Mail Sent Successfully.");
         handleLoading();
-        swal("Email Sent Successfully", "", "success");
+        if (usedFor != "priceCalculator")
+          swal("Email Sent Successfully", "", "success");
       },
       (error) => {
         handleLoading();

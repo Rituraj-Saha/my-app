@@ -21,6 +21,8 @@ const PriceCalculatorAlertDialog = (props) => {
   const ksideARef = useRef("");
   const ksideBRef = useRef("");
   const ksideCRef = useRef("");
+  const wHeight = useRef("");
+  const wWidth = useRef("");
 
   const stage = {
     display: "flex",
@@ -66,6 +68,7 @@ const PriceCalculatorAlertDialog = (props) => {
   const [selectedItemsForPackage, setSelectedItemsForPackage] =
     useState("Standard");
   const [selectedKitchenType, setSelectedKitchenType] = useState("L Shaped");
+  const [selecteWardrobe, setSelectedWardrobe] = useState("Sliding");
 
   function selctorIndividualItem(itemList, title, usedFor) {
     let itemListObjs = [];
@@ -77,11 +80,13 @@ const PriceCalculatorAlertDialog = (props) => {
     }
 
     const handleClick = (index, usedFor) => {
+      console.log("used fr: " + usedFor);
       if (usedFor == "FOR BHK") setSelectedItemsForBHK(index);
       if (usedFor == "FOR PACKAGE") setSelectedItemsForPackage(index);
-      if (usedFor == "FOR Kitchen") {
-        // console.log("used for kitchen entered");
-        setSelectedKitchenType(index);
+      if (usedFor == "FOR Kitchen") setSelectedKitchenType(index);
+
+      if (usedFor == "FOR Wardrobe") {
+        setSelectedWardrobe(index);
       }
     };
 
@@ -100,27 +105,47 @@ const PriceCalculatorAlertDialog = (props) => {
       >
         <span>{title}</span>
         {itemListObjs.map((item, index) => {
-          console.log("Before: " + (usedFor == "FOR Kitchen") + " " + usedFor);
           return usedFor != "FOR Kitchen" ? (
-            <div
-              key={index}
-              style={selectordivStyle}
-              onClick={() => handleClick(item.title, usedFor)}
-            >
-              {console.log("after: " + usedFor)}
-              <div style={outerCircle}>
-                {usedFor == "FOR BHK" && selectedItemsForBHK == item.title ? (
-                  <div style={innerCircle}></div>
-                ) : <></> &&
-                  usedFor == "FOR PACKAGE" &&
-                  selectedItemsForPackage == item.title ? (
-                  <div style={innerCircle}></div>
-                ) : (
-                  <></>
-                )}
+            usedFor == "FOR BHK" ? (
+              <div
+                key={index}
+                style={selectordivStyle}
+                onClick={() => handleClick(item.title, usedFor)}
+              >
+                <div style={outerCircle}>
+                  {usedFor == "FOR BHK" && selectedItemsForBHK == item.title ? (
+                    <div style={innerCircle}></div>
+                  ) : <></> &&
+                    usedFor == "FOR PACKAGE" &&
+                    selectedItemsForPackage == item.title ? (
+                    <div style={innerCircle}></div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <span>{item.title}</span>
               </div>
-              <span>{item.title}</span>
-            </div>
+            ) : (
+              <div
+                key={index}
+                style={selectordivStyle}
+                onClick={() => handleClick(item.title, usedFor)}
+              >
+                <div style={outerCircle}>
+                  {usedFor == "FOR Wardrobe" &&
+                  selecteWardrobe == item.title ? (
+                    <div style={innerCircle}></div>
+                  ) : <></> &&
+                    usedFor == "FOR PACKAGE" &&
+                    selectedItemsForPackage == item.title ? (
+                    <div style={innerCircle}></div>
+                  ) : (
+                    <></>
+                  )}
+                </div>
+                <span>{item.title}</span>
+              </div>
+            )
           ) : (
             <div>
               <div
@@ -200,7 +225,15 @@ const PriceCalculatorAlertDialog = (props) => {
         );
       }
       if (typeOfSpaceSlected == "Wardrobe") {
-        return <span>Wardrobe</span>;
+        return (
+          <>
+            {selctorIndividualItem(
+              ["Sliding", "Swing", "Mixed"],
+              "Select Your Wardrobe type",
+              "FOR Wardrobe"
+            )}
+          </>
+        );
       }
     }
     if (type == 2) {
@@ -340,6 +373,67 @@ const PriceCalculatorAlertDialog = (props) => {
           </div>
         );
       }
+      if (typeOfSpaceSlected == "Wardrobe") {
+        return (
+          <div
+            className="carpetAreaInput"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "20px",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+              height: "100%",
+            }}
+          >
+            <span style={{ textAlign: "left", paddingLeft: "20px" }}>
+              Please Enter Your Wardrobe height
+            </span>
+            <TextField
+              id="outlined-basic"
+              label="Wardrobe Height"
+              variant="outlined"
+              sx={{
+                width: "80%",
+                borderRadius: 1,
+                "& .MuiOutlinedInput-root": {
+                  "&.Mui-focused fieldset": {
+                    borderColor: "rgba(255,255,255,.2)",
+                  },
+                },
+              }}
+              InputLabelProps={{
+                style: { color: "#fff" },
+              }}
+              InputProps={{ style: { color: "#fff" } }}
+              inputRef={wHeight}
+            />
+            <span style={{ textAlign: "left", paddingLeft: "20px" }}>
+              Please Enter Your Wardrobe width
+            </span>
+            <TextField
+              id="outlined-basic"
+              label="Wardrobe Width"
+              variant="outlined"
+              sx={{
+                width: "80%",
+                borderRadius: 1,
+                "& .MuiOutlinedInput-root": {
+                  "&.Mui-focused fieldset": {
+                    borderColor: "rgba(255,255,255,.2)",
+                  },
+                },
+              }}
+              InputLabelProps={{
+                style: { color: "#fff" },
+              }}
+              InputProps={{ style: { color: "#fff" } }}
+              inputRef={wWidth}
+            />
+          </div>
+        );
+      }
     }
     if (type == 3) {
       return (
@@ -438,8 +532,39 @@ const PriceCalculatorAlertDialog = (props) => {
         );
         return true;
       }
-    }
+    } else {
+      let pricePerSqFt = 0;
+      if (selectedItemsForPackage == "Standard") {
+        pricePerSqFt = 1650;
+      } else if (selectedItemsForPackage == "Premium") {
+        pricePerSqFt = 1900;
+      } else if (selectedItemsForPackage == "Luxury") {
+        pricePerSqFt = 2700;
+      }
+      // console.log("area is:" + areaRef.current.value);
+      if (wHeight.current.value == "") {
+        swal("Invalid input", "Please Enter correct height", "warning");
+        return false;
+      } else if (wWidth.current.value == "") {
+        swal("Invalid input", "Please Enter correct width", "warning");
+        return false;
+      } else {
+        const area =
+          parseInt(wHeight.current.value) * parseInt(wWidth.current.value);
+        const price = area * pricePerSqFt;
 
+        swal(
+          "Approximate quote for your " +
+            selecteWardrobe +
+            " is RS: " +
+            price +
+            " only",
+          "",
+          "success"
+        );
+        return true;
+      }
+    }
     return false;
   };
 
@@ -450,7 +575,7 @@ const PriceCalculatorAlertDialog = (props) => {
         position: "absolute",
         width: "90vw",
         height: "70vh",
-        background: "rgba(162, 162, 162)",
+        background: "#E7E7E7",
         left: "5%",
         display: "flex",
         flex: "1",

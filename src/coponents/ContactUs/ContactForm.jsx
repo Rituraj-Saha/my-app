@@ -63,14 +63,9 @@ const ContactForm = (props) => {
   function funhandleLoading() {
     setHandleLoading(false);
   }
-  function SendMail(msg) {
+  function SendMail(msg, usedFor) {
     setHandleLoading(true);
-    let customMsg = "";
-    if (msg == "") {
-      customMsg = messageRef.current.value;
-    } else {
-      customMsg = msg;
-    }
+
     useSendMail(
       nameRef.current.value,
       funhandleLoading,
@@ -81,7 +76,8 @@ const ContactForm = (props) => {
         "  Phone Number: " +
         phoneRef.current.value +
         "  Message: " +
-        customMsg
+        msg,
+      usedFor
     );
   }
 
@@ -200,12 +196,14 @@ const ContactForm = (props) => {
             ? () => {
                 if (validate()) {
                   if (props.calcutedAmount()) {
-                    SendMail("custom msg");
+                    SendMail("custom msg", usedFor);
                   }
                 }
               }
             : () => {
-                return validate() ? SendMail("") : null;
+                let customMsg = messageRef.current.value;
+
+                return validate() ? SendMail(customMsg) : null;
               }
         }
       >
