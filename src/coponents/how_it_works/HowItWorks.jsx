@@ -54,7 +54,7 @@ const HowItWorks = () => {
               <span>Get A Quote & Fill the Contact Form</span>
 
               {/* <span>
-                Our Homecrafter team will reachout to you to understand your
+                Our Dream Weaver team will reachout to you to understand your
                 design vision both asthetically & functionally.
               </span> */}
             </div>
@@ -92,7 +92,7 @@ const HowItWorks = () => {
               <span>Scedule A meeting with our designeres</span>
 
               {/* <span>
-                Our Homecrafter team will reachout to you to understand your
+                Our Dream Weaver team will reachout to you to understand your
                 design vision both asthetically & functionally.
               </span> */}
             </div>
@@ -129,7 +129,7 @@ const HowItWorks = () => {
               {" "}
               <span>Site visit & Finilize the contract</span>
               {/* <span>
-                Our Homecrafter team will reachout to you to understand your
+                Our Dream Weaver team will reachout to you to understand your
                 design vision both asthetically & functionally.
               </span> */}
             </div>
@@ -166,7 +166,7 @@ const HowItWorks = () => {
             <div className="avtar-title-sub-wrap">
               <span>Your dream home is Ready To Deliver</span>
               {/* <span>
-                Our Homecrafter team will reachout to you to understand your
+                Our Dream Weaver team will reachout to you to understand your
                 design vision both asthetically & functionally.
               </span> */}
             </div>

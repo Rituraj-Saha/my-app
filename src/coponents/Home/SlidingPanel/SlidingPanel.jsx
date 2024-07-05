@@ -15,6 +15,7 @@ import PriceCal from "../../price_calculator/PriceCal";
 import { Element } from "react-scroll";
 import { useDispatch } from "react-redux";
 import { resetStore } from "../../../app/action";
+import ContactForm from "../../ContactUs/ContactForm";
 
 register();
 
@@ -125,7 +126,8 @@ const SlidingPanel = () => {
             {openDialog ? (
               <div className="alertdialog-mobile">
                 <div className="alertdialog_container-mobile">
-                  <PriceCal />
+                  {/* <PriceCal /> */}
+                  <ContactForm />
                   <button
                     onClick={() => {
                       resetDispatch(resetStore());
@@ -148,7 +150,7 @@ const SlidingPanel = () => {
             {openDialog ? (
               <div className="alertdialog">
                 <div className="alertdialog_container">
-                  <PriceCal />
+                  <ContactForm />
                   <button
                     onClick={() => {
                       resetDispatch(resetStore());
@@ -171,7 +173,7 @@ const SlidingPanel = () => {
           ref={swiperElRef}
           init="false"
           slides-per-view={useIsMobile() ? "1" : "3"}
-          navigation="true"
+          // navigation="true"
           pagination="true"
           class="my_swiper"
           spaceBetween="40"

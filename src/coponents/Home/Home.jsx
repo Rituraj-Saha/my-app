@@ -76,7 +76,7 @@ const Home = (props) => {
                 </span>
 
                 <span>Experiance unmatched quality & timely delivery with</span>
-                <span>HomeCrafter</span>
+                <span>Dream Weaver</span>
               </div>
               <div className="right">
                 <ContactForm msgVisibility="visible" />
@@ -89,7 +89,7 @@ const Home = (props) => {
             <TaglineSectionOne />
             <SlidingPanel id="offerings" />
 
-            <DesignIdea id="design_idea" />
+            {/* <DesignIdea id="design_idea" /> */}
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}

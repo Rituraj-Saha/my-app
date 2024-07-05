@@ -51,7 +51,7 @@ const HomeMobile = (props) => {
             </span>
 
             <span>Experiance unmatched quality & timely delivery with</span>
-            <span>HomeCrafter</span>
+            <span>Dream Weaver</span>
           </div>
           <div className="right">{/* <GetQuote /> */}</div>
           <div className="wappBar">

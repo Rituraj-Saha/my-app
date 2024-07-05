@@ -3,7 +3,8 @@ import "./Tagline.css";
 import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
-import PriceCalculator from "../../price_calculator/PriceCal"
+import PriceCalculator from "../../price_calculator/PriceCal";
+import ContactForm from "../../ContactUs/ContactForm";
 const TaglineSectionOne = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
@@ -28,7 +29,7 @@ const TaglineSectionOne = () => {
             <div className="alertdialog-mobile">
               <div className="alertdialog_container-mobile">
                 {/* <GetQuote /> */}
-                <PriceCalculator/>
+                <ContactForm />
                 <button
                   onClick={() => setOpenDialog(false)}
                   className="taglinespan3_alertdialog_cls_button-mobile"
@@ -49,7 +50,7 @@ const TaglineSectionOne = () => {
             <div className="alertdialog">
               <div className="alertdialog_container">
                 {/* <GetQuote /> */}
-                <PriceCalculator/>
+                <ContactForm />
                 <button
                   onClick={() => setOpenDialog(false)}
                   className="taglinespan3_alertdialog_cls_button"

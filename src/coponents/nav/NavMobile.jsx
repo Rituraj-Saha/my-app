@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "../Home/Home";
 import HomeMobile from "../Home/HomeMobile";
 import CloseIcon from "@mui/icons-material/Close";
+import LogoDecor from "../../res/logoDecor.jpeg";
 const NavMobile = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -96,7 +97,16 @@ const NavMobile = () => {
             {" "}
             <MenuIcon />
           </Button>
-          <span className="logo">LOGO</span>
+          <div className="logo">
+            <img
+              src={LogoDecor}
+              style={{
+                width: "50px",
+                objectFit: "cover",
+                borderRadius: "100%",
+              }}
+            />
+          </div>
         </div>
 
         <Drawer open={open} onClose={toggleDrawer(false)}>

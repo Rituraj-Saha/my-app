@@ -4,7 +4,7 @@ import Home from "../Home/Home";
 import Offering from "../offerings/Offering";
 
 import ScrollToTop from "../../util/ScrollToTop";
-
+import LogoDecor from "../../res/logoDecor.jpeg";
 import {
   Link as ScrollLink,
   Element,
@@ -49,7 +49,10 @@ const Nav = () => {
       <ScrollToTop />{" "}
       <div className="nav-parent">
         <nav>
-          <span>LOGO</span>
+          <img
+            src={LogoDecor}
+            style={{ width: "80px", objectFit: "cover", borderRadius: "100%" }}
+          />
           <ul>
             <li>
               {" "}
@@ -70,7 +73,10 @@ const Nav = () => {
               </Link>
             </li>
             <li>
-              <Link to="/price-calculator-home" scroll={"#price-calculator-home"}>
+              <Link
+                to="/price-calculator-home"
+                scroll={"#price-calculator-home"}
+              >
                 {" "}
                 Price Calculator
               </Link>
@@ -114,7 +120,11 @@ const Nav = () => {
               path="/price-calculator-home"
               element={<Home scrollToElement="price-calculator-home" />}
             ></Route>
-            <Route exact path="/design-ideas" element={<Home scrollToElement="design-ideas" />}></Route>
+            <Route
+              exact
+              path="/design-ideas"
+              element={<Home scrollToElement="design-ideas" />}
+            ></Route>
           </Routes>
           {/* <Home />
       <BadgeSection /> */}
