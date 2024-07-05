@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Element } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 import PriceCalculatorHomeCard from "./PriceCalculatorHomeCard";
 import HomeSVGPc from "../../../res/price_calculator_svgs/home-svg-pc.svg";
 import "./PriceHomeCalculator.css";
@@ -9,6 +9,8 @@ import CalcuteSvgPc from "../../../res/price_calculator_svgs/calculator-svg-pc.s
 import PriceCalculatorAlertDialog from "./PriceCalculatorAlertDialog";
 import { resetStore } from "../../../app/action";
 import { useDispatch } from "react-redux";
+
+import useIsMobile from "../../../util/useIsMobile";
 const PriceCalculatorHome = () => {
   const questions = {
     fullHome: {
@@ -24,6 +26,13 @@ const PriceCalculatorHome = () => {
     setOpenDialog(false);
   };
   const handleOpenDialog = () => {
+    scroller.scrollTo("price-calculator-home", {
+      to: "price-calculator-home",
+      spy: true,
+      smooth: true,
+      duration: 500,
+      offset: -300,
+    });
     setOpenDialog(true);
   };
   return (
@@ -37,9 +46,16 @@ const PriceCalculatorHome = () => {
       </span>
 
       {openDialog && (
-        <PriceCalculatorAlertDialog handleCloseClick={handleCloseClick} />
+        <PriceCalculatorAlertDialog
+          handleCloseClick={handleCloseClick}
+          id="PriceCalculatorAlertDialog"
+        />
       )}
-      <div className="priceCalculatorCards">
+      <div
+        className={
+          useIsMobile() ? "priceCalculatorCardsMobile" : "priceCalculatorCards"
+        }
+      >
         <PriceCalculatorHomeCard
           image={HomeSVGPc}
           imageright={CalcuteSvgPc}

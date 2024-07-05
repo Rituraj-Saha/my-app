@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Scale } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTypeOfSpace } from "../../../features/priceCalState/typeOfSpaceSlice";
+import useIsMobile from "../../../util/useIsMobile";
 
 const PriceCalculatorHomeCard = (props) => {
   const dispatch = useDispatch();
@@ -12,8 +13,17 @@ const PriceCalculatorHomeCard = (props) => {
     dispatch(selectTypeOfSpace(props.title));
     return props.handleOpenDialog();
   };
+  const isMobile = useIsMobile();
   return (
-    <Card variant="outlined" sx={{ width: "25%", height: "300px" }}>
+    <Card
+      variant="outlined"
+      sx={{
+        width: () => {
+          return isMobile ? "90%" : "25%";
+        },
+        height: "300px",
+      }}
+    >
       <div
         className="parent"
         style={{

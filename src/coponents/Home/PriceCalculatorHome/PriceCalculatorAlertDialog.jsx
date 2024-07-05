@@ -15,6 +15,7 @@ import ParallelMes from "../../../res/parelledMes.png";
 import StraightMes from "../../../res/streightMes.png";
 import UshapedMes from "../../../res/ushapedmes.png";
 import { current } from "@reduxjs/toolkit";
+import useIsMobile from "../../../util/useIsMobile";
 
 const PriceCalculatorAlertDialog = (props) => {
   const areaRef = useRef("");
@@ -23,6 +24,8 @@ const PriceCalculatorAlertDialog = (props) => {
   const ksideCRef = useRef("");
   const wHeight = useRef("");
   const wWidth = useRef("");
+  const isMobile = useIsMobile();
+  console.log("mobile check alert: " + isMobile);
 
   const stage = {
     display: "flex",
@@ -579,21 +582,23 @@ const PriceCalculatorAlertDialog = (props) => {
         left: "5%",
         display: "flex",
         flex: "1",
-        zIndex: "9",
+        zIndex: "1",
+        flexDirection: isMobile ? "column" : "row",
+        overflow: "auto",
       }}
     >
       <div
         className="buttonClose"
         style={{
           display: "flex",
-          position: "absolute",
-          left: "-1%",
-          top: "-2%",
-          zIndex: "99",
+          position: "sticky",
+          left: "0%",
+          top: "1%",
+          zIndex: "1",
           background: "var(--buttonBack)",
           borderRadius: "50%",
-          width: "40px",
-          height: "40px",
+          width: "30px",
+          height: "30px",
           alignItems: "center",
           justifyContent: "center",
           cursor: "pointer",

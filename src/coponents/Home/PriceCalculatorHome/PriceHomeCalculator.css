@@ -3,6 +3,15 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  flex-direction: row;
+}
+.priceCalculatorCardsMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  gap: 30px;
 }
 .price-calculator-home {
   display: flex;

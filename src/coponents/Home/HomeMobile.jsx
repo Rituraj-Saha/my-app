@@ -11,6 +11,7 @@ import { useLocation } from "react-router-dom";
 import { Element, scroller } from "react-scroll";
 import PriceCal from "../price_calculator/PriceCal";
 import Contact from "../ContactUs/Contact";
+import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 const HomeMobile = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -63,6 +64,7 @@ const HomeMobile = (props) => {
 
         <HowItWorks id="how_it_works" />
         {/* <PriceCal id="price_calculator" /> */}
+        <PriceCalculatorHome id="price-calculator-home" />
         <Contact id="contact" />
       </div>
     </>
