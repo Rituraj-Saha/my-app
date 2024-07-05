@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.59181a2b.css",
-    "main.js": "/my-app/static/js/main.64c52354.js",
+    "main.css": "/my-app/static/css/main.8144be95.css",
+    "main.js": "/my-app/static/js/main.b9244bda.js",
     "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
     "static/media/slidingWordrobe.png": "/my-app/static/media/slidingWordrobe.06a2b52ebfe474ae0923.png",
     "static/media/bedroom_wooden.jpg": "/my-app/static/media/bedroom_wooden.c7ccb57d33550441532a.jpg",
     "static/media/interior_home.jpg": "/my-app/static/media/interior_home.f1a398d471b32149fec9.jpg",
     "static/media/Indian_bedroom.jpg": "/my-app/static/media/Indian_bedroom.1f456b6616e32afffda4.jpg",
     "static/media/kitchen.jpg": "/my-app/static/media/kitchen.282aa06848718363f769.jpg",
+    "static/media/logoDecor.jpeg": "/my-app/static/media/logoDecor.5a48c8ef2dc68a9b07f3.jpeg",
     "static/media/cane_furniture_living.jpg": "/my-app/static/media/cane_furniture_living.eef901d66dfb2762db04.jpg",
     "static/media/engineer-worker-svgrepo-com.svg": "/my-app/static/media/engineer-worker-svgrepo-com.15363cb57c1d74f9185a87e1032fd918.svg",
     "static/media/home-svg-pc.svg": "/my-app/static/media/home-svg-pc.1baf37c3498be9746addc8141a8db5e4.svg",
@@ -23,12 +24,12 @@
     "static/media/ok-svgrepo-com.svg": "/my-app/static/media/ok-svgrepo-com.1193f0cd0369d4a216b2c0ea5a4327be.svg",
     "index.html": "/my-app/index.html",
     "static/media/wave.svg": "/my-app/static/media/wave.05c0ad82f993e1bc7960.svg",
-    "main.59181a2b.css.map": "/my-app/static/css/main.59181a2b.css.map",
-    "main.64c52354.js.map": "/my-app/static/js/main.64c52354.js.map",
+    "main.8144be95.css.map": "/my-app/static/css/main.8144be95.css.map",
+    "main.b9244bda.js.map": "/my-app/static/js/main.b9244bda.js.map",
     "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.59181a2b.css",
-    "static/js/main.64c52354.js"
+    "static/css/main.8144be95.css",
+    "static/js/main.b9244bda.js"
   ]
 }
