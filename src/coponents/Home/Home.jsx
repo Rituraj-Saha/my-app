@@ -14,6 +14,7 @@ import ContactForm from "../ContactUs/ContactForm";
 import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import Contact from "../ContactUs/Contact";
 import DesignIdea from "../DesignIdeas/DesignIdea";
+import LogoDream from "../../res/Dreamweaver.png";
 const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -76,7 +77,16 @@ const Home = (props) => {
                 </span>
 
                 <span>Experiance unmatched quality & timely delivery with</span>
-                <span>Dream Weaver</span>
+                {/* <span>Dream-Weaver</span> */}
+                <img
+                  src={LogoDream}
+                  alt=""
+                  style={{
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(255, 255, 255, 0.6)",
+                    objectFit: "cover",
+                  }}
+                />
               </div>
               <div className="right">
                 <ContactForm msgVisibility="visible" />

@@ -37,6 +37,7 @@
   padding-top: 2%;
   padding-left: 10%;
   flex: 0.5;
+  gap: 20px;
 }
 .content > .left > span:nth-child(1) {
   font-size: 3em;
@@ -60,7 +61,6 @@
   font-size: 5.1em;
   font-weight: 700;
   color: rgb(247, 180, 24);
-
   align-items: start;
   justify-content: start;
 }
