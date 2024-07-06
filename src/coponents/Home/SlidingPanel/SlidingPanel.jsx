@@ -12,7 +12,7 @@ import GetQuote from "../../GetQuote/GetQuote";
 import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
 import PriceCal from "../../price_calculator/PriceCal";
-import { Element } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 import { useDispatch } from "react-redux";
 import { resetStore } from "../../../app/action";
 import ContactForm from "../../ContactUs/ContactForm";
@@ -23,6 +23,13 @@ const SlidingPanel = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const resetDispatch = useDispatch();
   const handleClick = () => {
+    scroller.scrollTo("offerings", {
+      to: "offerings",
+      spy: true,
+      smooth: true,
+      duration: 500,
+      offset: -300,
+    });
     setOpenDialog(true);
   };
 

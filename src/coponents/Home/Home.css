@@ -14,11 +14,11 @@
       rgba(3, 3, 3, 0.897) 38%,
       rgba(255, 255, 255, 0.01453081232492992) 80%
     ),
-    url("../../res/interior_home.jpg");
+    url("../../res/ParallelxImages/pImage1.jpg");
   background-repeat: no-repeat;
-  background-size: 100vw 100%;
+  background-size: 100vw 100vh;
   width: 100%;
-  height: 280px;
+  min-height: 100vh !important;
   text-align: center;
   color: #fff;
   top: 9vh;
@@ -28,6 +28,7 @@
   z-index: 2;
   display: flex;
   flex: 1;
+  gap: 10%;
 }
 .content .left {
   display: flex;
@@ -36,26 +37,30 @@
   align-items: flex-start;
   padding-top: 2%;
   padding-left: 10%;
-  flex: 0.5;
-  gap: 20px;
+  flex: 0.6;
+  text-align: left;
+  gap: 2%;
 }
 .content > .left > span:nth-child(1) {
-  font-size: 3em;
+  display: flex;
+  font-size: 2em;
   font-weight: 700;
   color: white;
+  align-items: flex-start;
 }
 .content > .left > span:nth-child(2) {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 700;
   color: white;
   text-align: start;
 }
 .content > .left > span:nth-child(3) {
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: 700;
   color: white;
   align-items: start;
   justify-content: start;
+  text-align: start;
 }
 .content > .left > span:nth-child(4) {
   font-size: 5.1em;
@@ -74,7 +79,7 @@
   padding: 50px;
   width: 50%;
   height: 70%;
-  flex: 0.3;
+  flex: 0.4;
 }
 .wappBar {
   height: 50px;

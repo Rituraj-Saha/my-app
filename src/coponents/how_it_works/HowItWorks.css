@@ -1,10 +1,11 @@
 .how-it-works-working-parent {
-  margin-top: 20vh;
+  margin-top: 10vh;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  color: white;
 }
 .how-it-works-working-parent > span:nth-child(1) {
   font-size: 30px;
@@ -40,7 +41,7 @@
     rgb(246, 37, 18) 47%,
     rgba(231, 13, 223, 1) 98%
   ); */
-  border: 1px solid var(--buttonBack);
+  border: 1px solid white;
   width: 40px !important;
   height: 40px !important;
   padding: 20px;
@@ -51,7 +52,7 @@
   justify-content: start;
   flex-direction: column;
   gap: 16px;
-  border: 1px solid rgb(187, 122, 122);
+  border: 1px solid rgb(246, 224, 224);
   margin: 15px;
   padding: 12px;
   border-radius: 5px;

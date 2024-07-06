@@ -40,6 +40,9 @@ const HowItWorks = () => {
                   height: "25px",
                   borderRadius: "25px",
                   color: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
                 }}
               >
                 1
@@ -77,6 +80,9 @@ const HowItWorks = () => {
                   height: "25px",
                   borderRadius: "25px",
                   color: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
                 }}
               >
                 2
@@ -110,11 +116,14 @@ const HowItWorks = () => {
             >
               <span
                 style={{
-                  backgroundColor: "var(--buttonBack",
+                  backgroundColor: "var(--buttonBack)",
                   width: "25px",
                   height: "25px",
                   borderRadius: "25px",
                   color: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
                 }}
               >
                 3
@@ -153,6 +162,9 @@ const HowItWorks = () => {
                   height: "25px",
                   borderRadius: "25px",
                   color: "white",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
                 }}
               >
                 4

@@ -9,13 +9,9 @@ const SlideCard = (props) => {
         <div className="slide-card-title">{props.title}</div>
         <div className="slide-card-subtitleSection">
           <div className="slide-card-subtitle">{props.subtitle}</div>
-          <div
-            className="slide-card-getQuoteButton"
-            onClick={props.handleClick}
-          >
-            <i></i>
-            Get Free Quote
-          </div>
+        </div>
+        <div className="slide-card-getQuoteButton" onClick={props.handleClick}>
+          Get Free Quote
         </div>
       </div>
     </div>

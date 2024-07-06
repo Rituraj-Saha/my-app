@@ -4,7 +4,7 @@ import Home from "../Home/Home";
 import Offering from "../offerings/Offering";
 
 import ScrollToTop from "../../util/ScrollToTop";
-import LogoDecor from "../../res/logoDecor.jpeg";
+import LogoDecor from "../../res/Dreamweaver.png";
 import {
   Link as ScrollLink,
   Element,
@@ -48,10 +48,10 @@ const Nav = () => {
     <Router>
       <ScrollToTop />{" "}
       <div className="nav-parent">
-        <nav>
+        <nav className="animation-div">
           <img
             src={LogoDecor}
-            style={{ width: "80px", objectFit: "cover", borderRadius: "100%" }}
+            // style={{ width: "80px", objectFit: "cover", borderRadius: "100%" }}
           />
           <ul>
             <li>
@@ -94,40 +94,44 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
-          <span className="get-quote">Get Quote</span>
+          <div className="get-quote">
+            <div className="btn-shine"> Get Quote</div>
+          </div>
         </nav>
-
-        <div className="container">
-          <Routes>
-            <Route exact path="/my-app/" element={<Home />}></Route>
-            <Route
-              exact
-              path="/offerings"
-              element={<Home scrollToElement="offerings" />}
-            ></Route>
-            <Route
-              exact
-              path="/howItWorks"
-              element={<Home scrollToElement="howItWorks" />}
-            ></Route>
-            <Route
-              exact
-              path="/contact"
-              element={<Home scrollToElement="contact" />}
-            ></Route>
-            <Route
-              exact
-              path="/price-calculator-home"
-              element={<Home scrollToElement="price-calculator-home" />}
-            ></Route>
-            <Route
-              exact
-              path="/design-ideas"
-              element={<Home scrollToElement="design-ideas" />}
-            ></Route>
-          </Routes>
-          {/* <Home />
+        <div className="backParallel">
+          <div className="backdrop"></div>
+          <div className="container">
+            <Routes>
+              <Route exact path="/my-app/" element={<Home />}></Route>
+              <Route
+                exact
+                path="/offerings"
+                element={<Home scrollToElement="offerings" />}
+              ></Route>
+              <Route
+                exact
+                path="/howItWorks"
+                element={<Home scrollToElement="howItWorks" />}
+              ></Route>
+              <Route
+                exact
+                path="/contact"
+                element={<Home scrollToElement="contact" />}
+              ></Route>
+              <Route
+                exact
+                path="/price-calculator-home"
+                element={<Home scrollToElement="price-calculator-home" />}
+              ></Route>
+              <Route
+                exact
+                path="/design-ideas"
+                element={<Home scrollToElement="design-ideas" />}
+              ></Route>
+            </Routes>
+            {/* <Home />
       <BadgeSection /> */}
+          </div>
         </div>
       </div>
     </Router>

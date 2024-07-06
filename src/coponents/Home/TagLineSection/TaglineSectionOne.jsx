@@ -5,10 +5,18 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import useIsMobile from "../../../util/useIsMobile";
 import PriceCalculator from "../../price_calculator/PriceCal";
 import ContactForm from "../../ContactUs/ContactForm";
+import { Element, scroller } from "react-scroll";
 const TaglineSectionOne = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
   const handleClick = () => {
+    scroller.scrollTo("offerings", {
+      to: "offerings",
+      spy: true,
+      smooth: true,
+      duration: 500,
+      offset: -300,
+    });
     setOpenDialog(true);
   };
 
