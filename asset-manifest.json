@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.88385208.css",
-    "main.js": "/my-app/static/js/main.2774d6fc.js",
+    "main.css": "/my-app/static/css/main.98da19e4.css",
+    "main.js": "/my-app/static/js/main.21116752.js",
     "static/js/453.68693753.chunk.js": "/my-app/static/js/453.68693753.chunk.js",
+    "static/media/pImage1.jpg": "/my-app/static/media/pImage1.6b9d6329f475524aff7d.jpg",
+    "static/media/pImage2.jpg": "/my-app/static/media/pImage2.b06286ebe57ab8ed74c3.jpg",
     "static/media/slidingWordrobe.png": "/my-app/static/media/slidingWordrobe.06a2b52ebfe474ae0923.png",
     "static/media/bedroom_wooden.jpg": "/my-app/static/media/bedroom_wooden.c7ccb57d33550441532a.jpg",
     "static/media/interior_home.jpg": "/my-app/static/media/interior_home.f1a398d471b32149fec9.jpg",
@@ -25,12 +27,12 @@
     "static/media/ok-svgrepo-com.svg": "/my-app/static/media/ok-svgrepo-com.1193f0cd0369d4a216b2c0ea5a4327be.svg",
     "index.html": "/my-app/index.html",
     "static/media/wave.svg": "/my-app/static/media/wave.05c0ad82f993e1bc7960.svg",
-    "main.88385208.css.map": "/my-app/static/css/main.88385208.css.map",
-    "main.2774d6fc.js.map": "/my-app/static/js/main.2774d6fc.js.map",
+    "main.98da19e4.css.map": "/my-app/static/css/main.98da19e4.css.map",
+    "main.21116752.js.map": "/my-app/static/js/main.21116752.js.map",
     "453.68693753.chunk.js.map": "/my-app/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88385208.css",
-    "static/js/main.2774d6fc.js"
+    "static/css/main.98da19e4.css",
+    "static/js/main.21116752.js"
   ]
 }
