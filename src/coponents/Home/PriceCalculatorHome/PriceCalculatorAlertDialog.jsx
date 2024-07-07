@@ -36,6 +36,7 @@ const PriceCalculatorAlertDialog = (props) => {
     background: "rgba(43, 42, 42, 0.2)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(5px)",
+    fontSize: "10px",
   };
   const selectordivStyle = {
     display: "flex",
@@ -45,21 +46,22 @@ const PriceCalculatorAlertDialog = (props) => {
     paddingLeft: "5px",
     paddingBottom: "5px",
     alignItems: "center",
-    gap: "10px",
+    gap: "5px",
     flexWrap: "wrap",
+    fontSize: "10px",
   };
   const outerCircle = {
     display: "flex",
-    width: "30px",
-    height: "30px",
+    width: "20px",
+    height: "20px",
     border: "1px solid black",
     borderRadius: "100%",
     alignItems: "center",
     justifyContent: "center",
   };
   const innerCircle = {
-    width: "20px",
-    height: "20px",
+    width: "10px",
+    height: "10px",
     borderRadius: "100%",
     backgroundColor: "var(--buttonBack)",
   };
@@ -579,17 +581,32 @@ const PriceCalculatorAlertDialog = (props) => {
   return (
     <div
       className="priceCalculatorAlertDialog"
-      style={{
-        position: "absolute",
-        width: "80vw",
-        height: "70vh",
-        background: "#E7E7E7",
-        display: "flex",
-        flex: "1",
-        zIndex: "9",
-        flexDirection: isMobile ? "column" : "row",
-        overflow: "auto",
-      }}
+      style={
+        useIsMobile()
+          ? {
+              position: "absolute",
+              width: "94vw",
+              height: "70vh",
+              background: "#E7E7E7",
+              display: "flex",
+              flex: "1",
+              zIndex: "9",
+              flexDirection: isMobile ? "column" : "row",
+              overflow: "auto",
+              marginLeft: "3%",
+            }
+          : {
+              position: "absolute",
+              width: "80vw",
+              height: "70vh",
+              background: "#E7E7E7",
+              display: "flex",
+              flex: "1",
+              zIndex: "9",
+              flexDirection: isMobile ? "column" : "row",
+              overflow: "auto",
+            }
+      }
     >
       <div
         className="buttonClose"

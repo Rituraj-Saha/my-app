@@ -41,7 +41,7 @@ const HomeMobile = (props) => {
       });
   });
   return (
-    <>
+    <div className="backParallel-mobile">
       <div className="home-mobile">
         <div className="content-mobile">
           <div className="left">
@@ -68,7 +68,7 @@ const HomeMobile = (props) => {
         <PriceCalculatorHome id="price-calculator-home" />
         <Contact id="contact" />
       </div>
-    </>
+    </div>
   );
 };
 

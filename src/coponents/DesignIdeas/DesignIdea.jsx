@@ -5,6 +5,7 @@ import { Element } from "react-scroll";
 
 import sampleImg from "../../res/Indian_bedroom.jpg";
 import DesignCarsoul from "./DesignCarsoul";
+import { Divider } from "@mui/material";
 
 const DesignIdea = () => {
   const swiperElRef = useRef(null);
@@ -101,49 +102,12 @@ const DesignIdea = () => {
         },
       ],
     },
-    // {
-    //   type: "Wardrobe",
-    //   title: "Wardrobe Design",
-    //   imageUrls: [
-    //     "1M5xRjaJfrup3breSq_-8EdH64dt9twlQ",
-    //     "1nWy4Gn-eh9ntOWCRDHVdtgE6pfJVU-zd",
-    //     "14AeZJgtwUagleUXCpdhy5vfHxQ-fpEkH",
-    //   ],
-    // },
-    // {
-    //   type: "End_to_End",
-    //   title: "End to End Designs",
-    //   imageUrls: [
-    //     "1M5xRjaJfrup3breSq_-8EdH64dt9twlQ",
-    //     "1nWy4Gn-eh9ntOWCRDHVdtgE6pfJVU-zd",
-    //     "14AeZJgtwUagleUXCpdhy5vfHxQ-fpEkH",
-    //   ],
-    // },
-    // {
-    //   type: "Kitchen",
-    //   title: "Kitchen Design",
-    //   imageUrls: [
-    //     "1M5xRjaJfrup3breSq_-8EdH64dt9twlQ",
-    //     "1nWy4Gn-eh9ntOWCRDHVdtgE6pfJVU-zd",
-    //     "14AeZJgtwUagleUXCpdhy5vfHxQ-fpEkH",
-    //   ],
-    // },
   ];
 
   const KitchenDesignOptionData = {
     type: "Kitchen",
     title: "Modular Kitchen",
     imageUrls: [
-      {
-        packgeShow: true,
-        package: "Basic",
-        urlId: "1TBmMoy5GDWd2X1DAuIuX_Me5Mu1Nc_QR",
-      },
-      {
-        packgeShow: true,
-        package: "Basic",
-        urlId: "1S7W4pqd3Hku4IeHgQxGeA-7pufMXlBF3",
-      },
       {
         packgeShow: true,
         package: "Basic",
@@ -237,10 +201,19 @@ const DesignIdea = () => {
         {LivingRoomDesignOptionData.map((item) => {
           return (
             <div className="designIdeaPanel">
-              <span style={{ fontSize: "35px", fontWeight: "600" }}>
+              <span
+                style={{ fontSize: "35px", fontWeight: "600", color: "white" }}
+              >
                 {item.title}
               </span>
-
+              <div
+                style={{
+                  width: "25%",
+                  height: "1px",
+                  background: "white",
+                  marginBottom: "15px",
+                }}
+              />
               <div
                 style={{
                   display: "flex",
@@ -289,6 +262,25 @@ const DesignIdea = () => {
             </div>
           );
         })}
+        <span
+          style={{
+            fontSize: "35px",
+            fontWeight: "600",
+            color: "white",
+            marginBottom: "10px",
+            marginTop: "25px",
+          }}
+        >
+          {KitchenDesignOptionData.title}
+        </span>
+        <div
+          style={{
+            width: "25%",
+            height: "1px",
+            background: "white",
+            marginBottom: "15px",
+          }}
+        />
         <DesignCarsoul data={KitchenDesignOptionData} />
       </div>
     </Element>

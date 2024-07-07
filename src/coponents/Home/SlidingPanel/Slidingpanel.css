@@ -14,6 +14,15 @@
   align-items: center;
   justify-content: center;
 }
+@media only screen and (max-width: 600px) {
+  .my_swiper {
+    display: flex;
+    height: 100%;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .sliding_panel_heading {
   width: 100%;

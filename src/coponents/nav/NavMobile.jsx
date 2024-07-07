@@ -90,33 +90,32 @@ const NavMobile = () => {
   );
   return (
     <Router>
-      <div className="backParallel">
-        <div className="navmobileparent">
-          <div className="topBar">
+      <div className="navmobileparent">
+        <div className="topBar">
+          {" "}
+          <Button onClick={toggleDrawer(true)} className="hamburger">
             {" "}
-            <Button onClick={toggleDrawer(true)} className="hamburger">
-              {" "}
-              <MenuIcon />
-            </Button>
-            <div className="logo">
-              <img
-                src={LogoDecor}
-                style={{
-                  width: "50px",
-                  objectFit: "cover",
-                  borderRadius: "100%",
-                }}
-              />
-            </div>
+            <MenuIcon />
+          </Button>
+          <div className="logo">
+            <img
+              src={LogoDecor}
+              style={{
+                width: "50px",
+                objectFit: "cover",
+                borderRadius: "100%",
+              }}
+            />
           </div>
+        </div>
 
-          <Drawer open={open} onClose={toggleDrawer(false)}>
-            <div onClick={toggleDrawer(false)} className="closeDraweBtn">
-              <CloseIcon />
-            </div>
-            {DrawerList}
-          </Drawer>
-
+        <Drawer open={open} onClose={toggleDrawer(false)}>
+          <div onClick={toggleDrawer(false)} className="closeDraweBtn">
+            <CloseIcon />
+          </div>
+          {DrawerList}
+        </Drawer>
+        <div className="backParallel-mobile">
           <div className="mobContainer">
             <Routes>
               <Route exact path="/my-app/" element={<HomeMobile />}></Route>
