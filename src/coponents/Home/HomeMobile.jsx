@@ -12,6 +12,7 @@ import { Element, scroller } from "react-scroll";
 import PriceCal from "../price_calculator/PriceCal";
 import Contact from "../ContactUs/Contact";
 import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
+import DesignIdea from "../DesignIdeas/DesignIdea";
 const HomeMobile = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -61,7 +62,7 @@ const HomeMobile = (props) => {
         <BadgeSectionMobile />
         <TaglineSectionOne />
         <SlidingPanel />
-
+        <DesignIdea id="design_idea" />
         <HowItWorks id="how_it_works" />
         {/* <PriceCal id="price_calculator" /> */}
         <PriceCalculatorHome id="price-calculator-home" />

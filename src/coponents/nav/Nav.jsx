@@ -99,7 +99,6 @@ const Nav = () => {
           </div>
         </nav>
         <div className="backParallel">
-          <div className="backdrop"></div>
           <div className="container">
             <Routes>
               <Route exact path="/my-app/" element={<Home />}></Route>

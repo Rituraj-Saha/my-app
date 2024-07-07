@@ -100,7 +100,7 @@ const Home = (props) => {
             <TaglineSectionOne />
             <SlidingPanel id="offerings" />
 
-            {/* <DesignIdea id="design_idea" /> */}
+            <DesignIdea id="design_idea" />
 
             <HowItWorks id="how_it_works" />
             {/* <PriceCal id="price_calculator" /> */}

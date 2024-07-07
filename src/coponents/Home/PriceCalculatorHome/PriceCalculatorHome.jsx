@@ -41,7 +41,14 @@ const PriceCalculatorHome = () => {
       className="price-calculator-home"
       id="price-calculator-home"
     >
-      <span style={{ fontSize: "30px", marginTop: "55px" }}>
+      <span
+        style={{
+          fontSize: "30px",
+          marginTop: "55px",
+          color: "white",
+          paddingLeft: "20px",
+        }}
+      >
         Get An Approximate Idea For Your Home Make over
       </span>
 

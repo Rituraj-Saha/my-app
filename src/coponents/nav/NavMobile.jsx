@@ -90,51 +90,54 @@ const NavMobile = () => {
   );
   return (
     <Router>
-      <div className="navmobileparent">
-        <div className="topBar">
-          {" "}
-          <Button onClick={toggleDrawer(true)} className="hamburger">
+      <div className="backParallel">
+        <div className="navmobileparent">
+          <div className="topBar">
             {" "}
-            <MenuIcon />
-          </Button>
-          <div className="logo">
-            <img
-              src={LogoDecor}
-              style={{
-                width: "50px",
-                objectFit: "cover",
-                borderRadius: "100%",
-              }}
-            />
+            <Button onClick={toggleDrawer(true)} className="hamburger">
+              {" "}
+              <MenuIcon />
+            </Button>
+            <div className="logo">
+              <img
+                src={LogoDecor}
+                style={{
+                  width: "50px",
+                  objectFit: "cover",
+                  borderRadius: "100%",
+                }}
+              />
+            </div>
           </div>
-        </div>
 
-        <Drawer open={open} onClose={toggleDrawer(false)}>
-          <div onClick={toggleDrawer(false)} className="closeDraweBtn">
-            <CloseIcon />
+          <Drawer open={open} onClose={toggleDrawer(false)}>
+            <div onClick={toggleDrawer(false)} className="closeDraweBtn">
+              <CloseIcon />
+            </div>
+            {DrawerList}
+          </Drawer>
+
+          <div className="mobContainer">
+            <Routes>
+              <Route exact path="/my-app/" element={<HomeMobile />}></Route>
+              <Route exact path="/my-app/" element={<HomeMobile />}></Route>
+              <Route
+                exact
+                path="/offerings"
+                element={<HomeMobile scrollToElement="offerings" />}
+              ></Route>
+              <Route
+                exact
+                path="/howItWorks"
+                element={<HomeMobile scrollToElement="howItWorks" />}
+              ></Route>
+              <Route
+                exact
+                path="/contact"
+                element={<HomeMobile scrollToElement="contact" />}
+              ></Route>
+            </Routes>
           </div>
-          {DrawerList}
-        </Drawer>
-        <div className="mobContainer">
-          <Routes>
-            <Route exact path="/my-app/" element={<HomeMobile />}></Route>
-            <Route exact path="/my-app/" element={<HomeMobile />}></Route>
-            <Route
-              exact
-              path="/offerings"
-              element={<HomeMobile scrollToElement="offerings" />}
-            ></Route>
-            <Route
-              exact
-              path="/howItWorks"
-              element={<HomeMobile scrollToElement="howItWorks" />}
-            ></Route>
-            <Route
-              exact
-              path="/contact"
-              element={<HomeMobile scrollToElement="contact" />}
-            ></Route>
-          </Routes>
         </div>
       </div>
     </Router>

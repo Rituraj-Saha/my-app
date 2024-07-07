@@ -11,7 +11,7 @@ const SlideCard = (props) => {
           <div className="slide-card-subtitle">{props.subtitle}</div>
         </div>
         <div className="slide-card-getQuoteButton" onClick={props.handleClick}>
-          Get Free Quote
+          Raise A Query
         </div>
       </div>
     </div>

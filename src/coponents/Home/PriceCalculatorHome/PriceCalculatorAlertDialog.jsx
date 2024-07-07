@@ -29,19 +29,21 @@ const PriceCalculatorAlertDialog = (props) => {
 
   const stage = {
     display: "flex",
-    border: "1px solid black",
-    flex: ".3",
+    flex: ".4",
     height: "100%",
     flexWrap: "wrap",
     overflow: "auto",
+    background: "rgba(43, 42, 42, 0.2)",
+    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+    backdropFilter: "blur(5px)",
   };
   const selectordivStyle = {
     display: "flex",
     minWidth: "80%",
     border: "1px solid black",
-    paddingTop: "10px",
-    paddingLeft: "10px",
-    paddingBottom: "10px",
+    paddingTop: "5px",
+    paddingLeft: "5px",
+    paddingBottom: "5px",
     alignItems: "center",
     gap: "10px",
     flexWrap: "wrap",
@@ -157,7 +159,10 @@ const PriceCalculatorAlertDialog = (props) => {
                 onClick={() => handleClick(item.title, usedFor)}
               >
                 {console.log("executed")}
-                <div className="leftOuterSelector">
+                <div
+                  className="leftOuterSelector"
+                  style={{ position: "absolute" }}
+                >
                   <div style={outerCircle}>
                     {usedFor == "FOR Kitchen" &&
                     selectedKitchenType == item.title ? (
@@ -576,13 +581,12 @@ const PriceCalculatorAlertDialog = (props) => {
       className="priceCalculatorAlertDialog"
       style={{
         position: "absolute",
-        width: "90vw",
+        width: "80vw",
         height: "70vh",
         background: "#E7E7E7",
-        left: "5%",
         display: "flex",
         flex: "1",
-        zIndex: "1",
+        zIndex: "9",
         flexDirection: isMobile ? "column" : "row",
         overflow: "auto",
       }}
@@ -591,8 +595,8 @@ const PriceCalculatorAlertDialog = (props) => {
         className="buttonClose"
         style={{
           display: "flex",
-          position: "sticky",
-          left: "0%",
+          position: "absolute",
+          left: "95%",
           top: "1%",
           zIndex: "1",
           background: "var(--buttonBack)",
@@ -615,7 +619,8 @@ const PriceCalculatorAlertDialog = (props) => {
           alignItems: "start",
           padding: "5px",
           justifyContent: "center",
-          gap: "10px",
+          gap: "2px",
+          width: "100%",
         }}
       >
         <div style={stage}>{stageContainer(1)}</div>
