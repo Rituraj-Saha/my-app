@@ -68,6 +68,9 @@ const Home = (props) => {
       ) : (
         <>
           <div className="home">
+            <div className="wappBar">
+              <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
+            </div>
             <div className="content">
               <div className="left">
                 <span>Bring home beautiful</span>
@@ -91,9 +94,6 @@ const Home = (props) => {
               </div>
               <div className="right">
                 <ContactForm msgVisibility="visible" />
-              </div>
-              <div className="wappBar">
-                <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
               </div>
             </div>
             <BadgeSection />

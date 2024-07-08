@@ -24,9 +24,9 @@ const TaglineSectionOne = () => {
     <div className="tagline">
       <span className="taglinespan1">The home design you crave</span>
       <span className="taglinespan2">
-        When you give your home the Home Crafter touch, you get both beauty and
-        functionality. We <br /> employ state-of-art technology to ensure your
-        home features a flawless look that lasts a very long time
+        When you give your home the touch of Decor Studio, you get both beauty
+        and functionality. We employ state-of-art technology to ensure your home
+        features a flawless look that lasts a very long time
       </span>
       <span onClick={handleClick} className="taglinespan3">
         BOOK FREE CONSULTATION

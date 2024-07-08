@@ -1,7 +1,7 @@
 .contact-parent {
   display: flex;
   width: 100%;
-  background-color: rgb(240, 240, 240);
+  color: white;
   gap: 10px;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@
 .contactHeading {
   text-align: start;
   width: 70%;
-  margin-left: 10%;
+  margin-left: 2%;
   margin-top: 25px;
 }
 .contactHeading span {

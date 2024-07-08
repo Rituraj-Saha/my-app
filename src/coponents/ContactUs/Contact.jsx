@@ -13,7 +13,7 @@ const Contact = () => {
     <Element name="contact" className="contact" id="contact">
       {" "}
       <div className="contactHeading">
-        <span>Contact Us</span>
+        <span style={{ color: "white" }}>Contact Us</span>
       </div>
       <div
         className={useIsMobile() ? "contact-parent-mobile" : "contact-parent"}
@@ -34,7 +34,7 @@ const Contact = () => {
         />
         <div
           className="right"
-          style={{ backgroundColor: "rgba(10, 8, 8, 0.6)" }}
+          style={{ backgroundColor: "rgba(10, 8, 8, 0.6)", padding: "50px" }}
         >
           <ContactForm />
         </div>

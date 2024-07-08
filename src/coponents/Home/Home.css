@@ -85,9 +85,9 @@
   height: 50px;
   width: 90px;
   position: fixed;
-  top: 40%;
+  top: 50vh;
   left: 95%;
-  background: white;
+  background: rgb(66, 66, 66, 0.4);
   border-radius: 5px;
   display: flex;
   align-items: center;

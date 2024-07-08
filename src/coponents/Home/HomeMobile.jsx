@@ -13,6 +13,7 @@ import PriceCal from "../price_calculator/PriceCal";
 import Contact from "../ContactUs/Contact";
 import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import DesignIdea from "../DesignIdeas/DesignIdea";
+import LogoDream from "../../res/Dreamweaver.png";
 const HomeMobile = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -43,6 +44,9 @@ const HomeMobile = (props) => {
   return (
     <div className="backParallel-mobile">
       <div className="home-mobile">
+        <div className="wappBar">
+          <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
+        </div>
         <div className="content-mobile">
           <div className="left">
             <span>Bring home beautiful</span>
@@ -52,12 +56,21 @@ const HomeMobile = (props) => {
             </span>
 
             <span>Experiance unmatched quality & timely delivery with</span>
-            <span>Dream Weaver</span>
+            {/* <span>Dream Weaver</span> */}
+            <img
+              src={LogoDream}
+              alt=""
+              style={{
+                borderRadius: "20%",
+                backgroundColor: "rgba(255, 255, 255, 0.6)",
+                objectFit: "cover",
+                height: "60%",
+                width: "40%",
+                marginTop: "40px",
+              }}
+            />
           </div>
           <div className="right">{/* <GetQuote /> */}</div>
-          <div className="wappBar">
-            <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
-          </div>
         </div>
         <BadgeSectionMobile />
         <TaglineSectionOne />
