@@ -25,7 +25,7 @@ const NavMobile = () => {
   function setLinkElement(text) {
     if (text == "Interior") {
       return (
-        <Link to="/my-app/">
+        <Link to="/">
           {" "}
           <ListItemText primary={text} />
         </Link>
@@ -118,8 +118,8 @@ const NavMobile = () => {
         <div className="backParallel-mobile">
           <div className="mobContainer">
             <Routes>
-              <Route exact path="/my-app/" element={<HomeMobile />}></Route>
-              <Route exact path="/my-app/" element={<HomeMobile />}></Route>
+              <Route exact path="/" element={<HomeMobile />}></Route>
+
               <Route
                 exact
                 path="/offerings"

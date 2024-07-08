@@ -56,7 +56,7 @@ const Nav = () => {
           <ul>
             <li>
               {" "}
-              <Link to="/my-app/" scroll={true}>
+              <Link to="/" scroll={true}>
                 Interior
               </Link>
             </li>
