@@ -28,7 +28,7 @@ const SlidingPanel = () => {
       spy: true,
       smooth: true,
       duration: 500,
-      offset: -300,
+      offset: 0,
     });
     setOpenDialog(true);
   };

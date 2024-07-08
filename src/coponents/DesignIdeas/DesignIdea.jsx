@@ -230,8 +230,9 @@ const DesignIdea = () => {
                     <div
                       style={{
                         display: "flex",
-                        border: "1px solid black",
                         width: "28%",
+                        flexWrap: "wrap",
+                        boxShadow: "5px 5px 5px 10px rgb(222,68,68,.5)",
                       }}
                     >
                       <div
@@ -239,9 +240,16 @@ const DesignIdea = () => {
                           position: "absolute",
                           height: "50px",
                           width: "50px",
+                          zIndex: "5",
                         }}
                       >
-                        B
+                        {mapImages.packgeShow ? (
+                          <div style={{ border: "1px solid black" }}>
+                            <span>{mapImages.package}</span>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
                       </div>
                       <img
                         src={
@@ -251,7 +259,8 @@ const DesignIdea = () => {
                         alt="image"
                         style={{
                           objectFit: "fill",
-                          padding: "10px",
+                          borderRadius: "5px",
+                          minHeight: "300px",
                           width: "100%",
                         }}
                       />

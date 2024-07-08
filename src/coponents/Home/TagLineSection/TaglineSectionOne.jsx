@@ -10,13 +10,13 @@ const TaglineSectionOne = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
   const handleClick = () => {
-    scroller.scrollTo("offerings", {
-      to: "offerings",
-      spy: true,
-      smooth: true,
-      duration: 500,
-      offset: -300,
-    });
+    // scroller.scrollTo("offerings", {
+    //   to: "offerings",
+    //   spy: true,
+    //   smooth: true,
+    //   duration: 500,
+    //   offset: 0,
+    // });
     setOpenDialog(true);
   };
 
