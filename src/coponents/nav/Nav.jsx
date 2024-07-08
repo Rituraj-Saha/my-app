@@ -101,7 +101,7 @@ const Nav = () => {
         <div className="backParallel">
           <div className="container">
             <Routes>
-              <Route exact path="/my-app/" element={<Home />}></Route>
+              <Route exact path="/" element={<Home />}></Route>
               <Route
                 exact
                 path="/offerings"
