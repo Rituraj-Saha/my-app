@@ -1,5 +1,5 @@
 .how-it-works-working-parent {
-  margin-top: 10vh;
+  margin-top: 1vh;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -11,15 +11,15 @@
   font-size: 30px;
 }
 .how-it-works-working-parent-mobile > span:nth-child(1) {
-  font-size: 25px;
+  font-size: 20px;
 }
 .how-it-works-working-parent-mobile {
-  margin-top: 30%;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  color: white;
 }
 .badjes {
   display: flex;
@@ -64,6 +64,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+  color: white;
 }
 .avtar-title-sub-wrap {
   padding: 15px;

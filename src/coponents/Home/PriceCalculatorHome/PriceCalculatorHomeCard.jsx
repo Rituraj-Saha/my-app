@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import { Scale } from "@mui/icons-material";
 import { Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTypeOfSpace } from "../../../features/priceCalState/typeOfSpaceSlice";

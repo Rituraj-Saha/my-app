@@ -1,4 +1,4 @@
-import { Padding } from "@mui/icons-material";
+import { Margin, Padding } from "@mui/icons-material";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -7,11 +7,11 @@ const DesignCarsoul = (props) => {
   const data = props.data;
   const carsolItemStyle = {
     display: "flex",
-    height: "80vh",
     // border: "1px solid black",
     marginLeft: "10px",
     flexDirection: "column",
     flexWrap: "wrap",
+    margin: "40px",
   };
   const responsive = {
     superLargeDesktop: {
@@ -38,7 +38,7 @@ const DesignCarsoul = (props) => {
     <div
       style={{
         width: "95%",
-        height: "80vh",
+        height: "50vh",
         // border: "1px solid black",
       }}
     >
@@ -47,7 +47,7 @@ const DesignCarsoul = (props) => {
         showDots={true}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={1000}
+        autoPlaySpeed={2000}
       >
         {data.imageUrls.map((item) => {
           return (
@@ -57,15 +57,24 @@ const DesignCarsoul = (props) => {
                 alt=""
                 style={{
                   width: "100%",
-                  flex: ".7",
+                  flex: ".5",
                   objectFit: "fill",
-                  maxHeight: "100%",
+                  maxHeight: "40%",
                   minHeight: "0",
                   draggable: "false",
                   pointerEvents: "none",
                   padding: "5px",
                 }}
               />
+              <div
+                style={{
+                  display: "flex",
+                  flex: ".5",
+                  border: "1px solid black",
+                }}
+              >
+                Click me
+              </div>
             </div>
           );
         })}

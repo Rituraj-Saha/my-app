@@ -79,7 +79,7 @@ const Home = (props) => {
                   interiors <span> that fit your budget</span>
                 </span>
 
-                <span>Experiance unmatched quality & timely delivery with</span>
+                <span>Experience unmatched quality & timely delivery with</span>
                 {/* <span>Dream-Weaver</span> */}
                 <img
                   src={LogoDream}

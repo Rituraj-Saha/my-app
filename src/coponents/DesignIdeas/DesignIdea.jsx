@@ -1,4 +1,4 @@
-import { React, useRef, useEffect } from "react";
+import { React, useRef, useEffect, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./DesignIdea.css";
 import { Element } from "react-scroll";
@@ -232,7 +232,7 @@ const DesignIdea = () => {
                         display: "flex",
                         width: "28%",
                         flexWrap: "wrap",
-                        boxShadow: "5px 5px 5px 10px rgb(222,68,68,.5)",
+                        boxShadow: "5px 5px 5px 10px rgb(89,82,82,.5)",
                       }}
                     >
                       <div
@@ -260,7 +260,7 @@ const DesignIdea = () => {
                         style={{
                           objectFit: "fill",
                           borderRadius: "5px",
-                          minHeight: "300px",
+                          maxHeight: "250px",
                           width: "100%",
                         }}
                       />
