@@ -6,6 +6,8 @@ import useIsMobile from "../../../util/useIsMobile";
 import PriceCalculator from "../../price_calculator/PriceCal";
 import ContactForm from "../../ContactUs/ContactForm";
 import { Element, scroller } from "react-scroll";
+import CustomButton from "../../../ReusableComponents/CustomButton/CustomButton";
+import Constants from "../../../Constants/Constant";
 const TaglineSectionOne = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
@@ -22,15 +24,15 @@ const TaglineSectionOne = () => {
 
   return (
     <div className="tagline">
-      <span className="taglinespan1">The home design you crave</span>
-      <span className="taglinespan2">
-        When you give your home the touch of Decor Studio, you get both beauty
-        and functionality. We employ state-of-art technology to ensure your home
-        features a flawless look that lasts a very long time
-      </span>
-      <span onClick={handleClick} className="taglinespan3">
+      <span className="taglinespan1">{Constants.TaglineMsg.title}</span>
+      <span className="taglinespan2">{Constants.TaglineMsg.msg}</span>
+      {/* <span onClick={handleClick} className="taglinespan3">
         BOOK FREE CONSULTATION
-      </span>
+      </span> */}
+      <CustomButton
+        title={"Book Free Consultation"}
+        handleClick={handleClick}
+      />
       {useIsMobile() ? (
         <>
           {openDialog ? (

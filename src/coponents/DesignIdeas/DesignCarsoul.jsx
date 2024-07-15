@@ -2,9 +2,11 @@ import { Margin, Padding } from "@mui/icons-material";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import CustomButton from "../../ReusableComponents/CustomButton/CustomButton";
 
 const DesignCarsoul = (props) => {
   const data = props.data;
+  const handleClick = props.handleClick;
   const carsolItemStyle = {
     display: "flex",
     // border: "1px solid black",
@@ -70,10 +72,14 @@ const DesignCarsoul = (props) => {
                 style={{
                   display: "flex",
                   flex: ".5",
-                  border: "1px solid black",
+                  alignItems: "end",
+                  justifyContent: "end",
                 }}
               >
-                Click me
+                <CustomButton
+                  title={"Get In Touch"}
+                  handleClick={handleClick}
+                />
               </div>
             </div>
           );

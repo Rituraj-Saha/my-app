@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Slidecard.css";
+import CustomButton from "../../../ReusableComponents/CustomButton/CustomButton";
 
 const SlideCard = (props) => {
   return (
@@ -10,9 +11,10 @@ const SlideCard = (props) => {
         <div className="slide-card-subtitleSection">
           <div className="slide-card-subtitle">{props.subtitle}</div>
         </div>
-        <div className="slide-card-getQuoteButton" onClick={props.handleClick}>
+        {/* <div className="slide-card-getQuoteButton" onClick={props.handleClick}>
           Raise A Query
-        </div>
+        </div> */}
+        <CustomButton title={"Raise A Query"} handleClick={props.handleClick} />
       </div>
     </div>
   );

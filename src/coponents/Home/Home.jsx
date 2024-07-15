@@ -15,6 +15,7 @@ import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import Contact from "../ContactUs/Contact";
 import DesignIdea from "../DesignIdeas/DesignIdea";
 import LogoDream from "../../res/Dreamweaver.png";
+import { homeMsg } from "../../Constants/Constant";
 const Home = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -73,13 +74,8 @@ const Home = (props) => {
             </div>
             <div className="content">
               <div className="left">
-                <span>Bring home beautiful</span>
+                {homeMsg()}
 
-                <span>
-                  interiors <span> that fit your budget</span>
-                </span>
-
-                <span>Experience unmatched quality & timely delivery with</span>
                 {/* <span>Dream-Weaver</span> */}
                 <img
                   src={LogoDream}

@@ -6,10 +6,13 @@ import { Element } from "react-scroll";
 import sampleImg from "../../res/Indian_bedroom.jpg";
 import DesignCarsoul from "./DesignCarsoul";
 import { Divider } from "@mui/material";
-
+import { motion, useScroll } from "framer-motion";
+import useIsMobile from "../../util/useIsMobile";
+import swal from "@sweetalert/with-react";
+import ContactForm from "../ContactUs/ContactForm";
 const DesignIdea = () => {
   const swiperElRef = useRef(null);
-
+  const { scrollYProgress } = useScroll();
   const LivingRoomDesignOptionData = [
     {
       type: "LivingRoom",
@@ -185,7 +188,29 @@ const DesignIdea = () => {
       },
     ],
   };
+  const checkMobile = useIsMobile() ? "100%" : "30%";
 
+  const alerWhenClickImage = () => {
+    return swal({
+      // content: alerWhenClickImage(
+      //   "https://drive.google.com/thumbnail?id=" +
+      //     mapImages.urlId
+      // ),
+      content: (
+        <div
+          style={{
+            background: "rgba(37, 36, 36, 0.9)",
+            padding: "10px",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(5px)",
+          }}
+        >
+          <ContactForm />
+        </div>
+      ),
+      buttons: false,
+    });
+  };
   return (
     <Element name="design-ideas" className="design-ideas" id="design-ideas">
       <div
@@ -217,7 +242,7 @@ const DesignIdea = () => {
               <div
                 style={{
                   display: "flex",
-                  width: "90%",
+                  width: "95%",
                   // border: "1px solid black",
                   flexWrap: "wrap",
                   gap: "10px",
@@ -227,15 +252,19 @@ const DesignIdea = () => {
               >
                 {item.imageUrls.map((mapImages) => {
                   return (
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, x: -200 }}
+                      whileInView={{ opacity: 1, x: 0 }}
                       style={{
                         display: "flex",
-                        width: "28%",
+                        width: checkMobile,
                         flexWrap: "wrap",
                         boxShadow: "5px 5px 5px 10px rgb(89,82,82,.5)",
+                        gap: "15vh",
                       }}
                     >
-                      <div
+                      {/* for future integration as badge of package */}
+                      {/* <div
                         style={{
                           position: "absolute",
                           height: "50px",
@@ -250,7 +279,7 @@ const DesignIdea = () => {
                         ) : (
                           <></>
                         )}
-                      </div>
+                      </div> */}
                       <img
                         src={
                           "https://drive.google.com/thumbnail?id=" +
@@ -262,9 +291,11 @@ const DesignIdea = () => {
                           borderRadius: "5px",
                           maxHeight: "250px",
                           width: "100%",
+                          cursor: "pointer",
                         }}
+                        onClick={alerWhenClickImage}
                       />
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -290,7 +321,10 @@ const DesignIdea = () => {
             marginBottom: "15px",
           }}
         />
-        <DesignCarsoul data={KitchenDesignOptionData} />
+        <DesignCarsoul
+          data={KitchenDesignOptionData}
+          handleClick={alerWhenClickImage}
+        />
       </div>
     </Element>
   );

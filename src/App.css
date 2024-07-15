@@ -6,10 +6,13 @@
   overflow-x: hidden;
   --buttonBack: #f17070;
 }
+iframe#webpack-dev-server-client-overlay {
+  display: none !important;
+}
 .btn-shine {
   display: flex;
-  color: #fff;
-  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  color: #ffffff;
+  background: linear-gradient(to right, #ffffff 0, #fffefe 10%, #3c3a3a 20%);
   /* background-position: 0; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

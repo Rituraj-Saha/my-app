@@ -99,19 +99,7 @@ nav ul li a {
 nav ul :hover {
   cursor: pointer;
 }
-.get-quote {
-  display: flex;
-  flex: 0.2;
-  background-color: rgb(241, 112, 112);
-  font-size: 1em;
-  font-weight: bold;
-  color: white;
-  border-radius: 25px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding: 10px;
-}
+
 @media only screen and (max-width: 600px) {
   .nav-parent {
     display: flex;
@@ -150,19 +138,5 @@ nav ul :hover {
   nav ul li a {
     text-decoration: none;
     color: white;
-  }
-  .get-quote {
-    flex: 0.3;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-    background-color: rgb(241, 112, 112);
-    font-size: 1em;
-    font-weight: bold;
-    color: white;
-    border-radius: 25px;
   }
 }

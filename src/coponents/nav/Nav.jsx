@@ -22,6 +22,8 @@ import {
   useNavigate,
 } from "react-router-dom";
 import DesignIdea from "../DesignIdeas/DesignIdea";
+import CustomButton from "../../ReusableComponents/CustomButton/CustomButton";
+import GetQuote from "../GetQuote/GetQuote";
 const Nav = () => {
   useEffect(() => {
     // Registering the 'begin' event and logging it to the console when triggered.
@@ -94,9 +96,6 @@ const Nav = () => {
               </Link>
             </li>
           </ul>
-          <div className="get-quote">
-            <div className="btn-shine"> Get Quote</div>
-          </div>
         </nav>
         <div className="backParallel">
           <div className="container">

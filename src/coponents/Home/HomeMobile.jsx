@@ -14,6 +14,8 @@ import Contact from "../ContactUs/Contact";
 import PriceCalculatorHome from "./PriceCalculatorHome/PriceCalculatorHome";
 import DesignIdea from "../DesignIdeas/DesignIdea";
 import LogoDream from "../../res/Dreamweaver.png";
+import { homeMsg } from "../../Constants/Constant";
+import ContactForm from "../ContactUs/ContactForm";
 const HomeMobile = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -49,13 +51,7 @@ const HomeMobile = (props) => {
         </div>
         <div className="content-mobile">
           <div className="left">
-            <span>Bring home beautiful</span>
-
-            <span>
-              interiors <span> that fit your budget</span>
-            </span>
-
-            <span>Experience unmatched quality & timely delivery with</span>
+            {homeMsg()}
             {/* <span>Dream Weaver</span> */}
             <img
               src={LogoDream}
@@ -70,7 +66,9 @@ const HomeMobile = (props) => {
               }}
             />
           </div>
-          <div className="right">{/* <GetQuote /> */}</div>
+          <div className="right">
+            <ContactForm />
+          </div>
         </div>
         <BadgeSectionMobile />
         <TaglineSectionOne />

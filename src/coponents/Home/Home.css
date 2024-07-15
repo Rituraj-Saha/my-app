@@ -2,7 +2,6 @@
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
-
   flex-direction: column;
 }
 
@@ -41,39 +40,6 @@
   text-align: left;
   gap: 2%;
 }
-.content > .left > span:nth-child(1) {
-  display: flex;
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-  align-items: flex-start;
-}
-.content > .left > span:nth-child(2) {
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-  text-align: start;
-}
-.content > .left > span:nth-child(3) {
-  font-size: 2em;
-  font-weight: 700;
-  color: white;
-  align-items: start;
-  justify-content: start;
-  text-align: start;
-}
-.content > .left > span:nth-child(4) {
-  font-size: 5.1em;
-  font-weight: 700;
-  color: rgb(247, 180, 24);
-  align-items: start;
-  justify-content: start;
-}
-.content > .left > span > span {
-  font-size: 1.1em;
-  font-weight: 700;
-  color: rgb(247, 180, 24);
-}
 .content .right {
   color: aliceblue;
   padding: 50px;
@@ -84,10 +50,10 @@
 .wappBar {
   height: 50px;
   width: 90px;
-  position: fixed;
+  position: sticky;
   top: 50vh;
   left: 95%;
-  background: rgb(66, 66, 66, 0.4);
+  background: rgba(221, 219, 219, 0.6);
   border-radius: 5px;
   display: flex;
   align-items: center;
