@@ -16,6 +16,7 @@ import DesignIdea from "../DesignIdeas/DesignIdea";
 import LogoDream from "../../res/Dreamweaver.png";
 import { homeMsg } from "../../Constants/Constant";
 import ContactForm from "../ContactUs/ContactForm";
+import { whatsAppMsgAction } from "../../Constants/Constant";
 const HomeMobile = (props) => {
   const { state } = useLocation();
   const { targetId } = state || {};
@@ -46,7 +47,12 @@ const HomeMobile = (props) => {
   return (
     <div className="backParallel-mobile">
       <div className="home-mobile">
-        <div className="wappBar">
+        <div
+          className="wappBar"
+          onClick={() => {
+            whatsAppMsgAction("hi");
+          }}
+        >
           <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
         </div>
         <div className="content-mobile">

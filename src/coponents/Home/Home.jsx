@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 import GetQuote from "../GetQuote/GetQuote";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+
 import useIsMobile from "../../util/useIsMobile";
 import HomeMobile from "./HomeMobile";
 import BadgeSection from "./BadgeSection/BadgeSection";
@@ -69,9 +69,6 @@ const Home = (props) => {
       ) : (
         <>
           <div className="home">
-            <div className="wappBar">
-              <WhatsAppIcon style={{ width: "55px", height: "48px" }} />
-            </div>
             <div className="content">
               <div className="left">
                 {homeMsg()}

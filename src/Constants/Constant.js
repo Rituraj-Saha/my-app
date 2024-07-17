@@ -2,6 +2,17 @@ import { color } from "framer-motion";
 import React from "react";
 import { motion, useScroll } from "framer-motion";
 import { duration } from "@mui/material";
+export function whatsAppMsgAction(msg) {
+  // Appending the phone number to the URL
+  console.log("clicked on wappp");
+  let url = `https://web.whatsapp.com/send?phone=+918296109996`;
+
+  // Appending the message to the URL by encoding it
+  url += `&text=${msg}&app_absent=0`;
+
+  // Open our newly created URL in a new tab to send the message
+  window.open(url);
+}
 export function homeMsg() {
   return (
     <>
@@ -37,13 +48,13 @@ export function homeMsg() {
 }
 const Constants = {
   waitScreenMsg: {
-    title: "Welcome To DecorStudio",
+    title: "Welcome To Dream Weaver Studio",
     msg: "Enhancing Your Lifestyle",
   },
 
   TaglineMsg: {
     title: "Personalized Designs for Every Lifestyle",
-    msg: "At DecorStudio, we understand that your home is an extension of who you are. That's why we offer tailored design solutions that reflect your unique personality and lifestyle. Our approach to interior design is all about creating spaces that are not only beautiful but also deeply personal and functional for your everyday life.",
+    msg: "At Dream Weaver Studio, we understand that your home is an extension of who you are. That's why we offer tailored design solutions that reflect your unique personality and lifestyle. Our approach to interior design is all about creating spaces that are not only beautiful but also deeply personal and functional for your everyday life.",
   },
   offeringsHeading: {
     title: "Tailored Design Solutions",

@@ -24,6 +24,19 @@ iframe#webpack-dev-server-client-overlay {
   text-decoration: none;
   white-space: nowrap;
 }
+.wappBar {
+  height: 50px;
+  width: 90px;
+  position: absolute;
+  top: 50vh;
+  left: 95%;
+  background: rgba(221, 219, 219, 0.6);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: green;
+}
 
 @-moz-keyframes shine {
   0% {
