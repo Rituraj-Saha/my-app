@@ -27,7 +27,7 @@ iframe#webpack-dev-server-client-overlay {
 .wappBar {
   height: 50px;
   width: 90px;
-  position: absolute;
+  position: sticky;
   top: 50vh;
   left: 95%;
   background: rgba(221, 219, 219, 0.6);

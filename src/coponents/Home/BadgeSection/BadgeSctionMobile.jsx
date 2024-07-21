@@ -1,25 +1,37 @@
 import React from "react";
-import WarentyImg from "../../../res/warrenty.avif";
-import Personalized from "../../../res/personalized.avif";
-import Transparentprice from "../../../res/transparentprice.avif";
+import WarentyImg from "../../../res/badgeSvgs/warrenty-design.svg";
+import Personalized from "../../../res/badgeSvgs/unique-design.svg";
+import Transparentprice from "../../../res/badgeSvgs/comp-pricing.svg";
 import "./BadgeSectionMobile.css";
 const BadgeSctionMobile = () => {
   return (
     <div className="badgesection-mobile">
       <div className="img-text">
         {" "}
-        <img src={WarentyImg} alt="" />
-        <span>FLat 10-year warrenty</span>
+        <img
+          src={WarentyImg}
+          alt=""
+          style={{ height: "60px", width: "60px" }}
+        />
+        <span>10 Year Service Warranty</span>
       </div>
       <div className="img-text">
         {" "}
-        <img src={Personalized} alt="" />
-        <span>Personalized designs</span>
+        <img
+          src={Personalized}
+          alt=""
+          style={{ height: "60px", width: "60px" }}
+        />
+        <span>Unique designs</span>
       </div>
       <div className="img-text">
         {" "}
-        <img src={Transparentprice} alt="" />
-        <span>Transparent pricing</span>
+        <img
+          src={Transparentprice}
+          alt=""
+          style={{ height: "60px", width: "60px" }}
+        />
+        <span>Competitive Pricing</span>
       </div>
     </div>
   );

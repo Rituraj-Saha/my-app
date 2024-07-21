@@ -5,10 +5,10 @@ import { duration } from "@mui/material";
 export function whatsAppMsgAction(msg) {
   // Appending the phone number to the URL
   console.log("clicked on wappp");
-  let url = `https://web.whatsapp.com/send?phone=+918296109996`;
-
+  // let url = `https://web.whatsapp.com/send?phone=+918296109996`;
+  let url = `https://wa.me/918296109996`;
   // Appending the message to the URL by encoding it
-  url += `&text=${msg}&app_absent=0`;
+  url += `?text=${msg}`;
 
   // Open our newly created URL in a new tab to send the message
   window.open(url);
@@ -59,6 +59,12 @@ const Constants = {
   offeringsHeading: {
     title: "Tailored Design Solutions",
     msg: "With DecorStudio, your home will be more than just a place to live",
+  },
+  ContactInfo: {
+    email: "support@dreamweaverstudio.in",
+    phone: "+918296109996",
+    address:
+      "Flat Number: B2F,Manindra Appartment,NSD Ghat Road,Sukchar,Kolkata-700115",
   },
 };
 export default Constants;

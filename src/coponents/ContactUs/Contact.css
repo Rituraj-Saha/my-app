@@ -3,7 +3,6 @@
   width: 100%;
   color: white;
   gap: 10px;
-  align-items: center;
   justify-content: center;
   margin-top: 45px;
   background-image: url(../../res/wave.svg);
@@ -16,7 +15,8 @@
 }
 .contact-parent-mobile {
   display: flex;
-  width: 100%;
+  width: 80%;
+  color: white;
   padding-bottom: 25px;
   gap: 10px;
   align-items: center;
@@ -49,4 +49,11 @@
 }
 .contactHeading span {
   font-size: 30px;
+}
+.addresss-tag {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  padding: 12px;
 }

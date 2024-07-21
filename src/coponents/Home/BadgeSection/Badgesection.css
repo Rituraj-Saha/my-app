@@ -9,9 +9,9 @@
 .img-text {
   display: flex;
   flex-direction: column;
-  width: 100px;
+
   height: 200px;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }

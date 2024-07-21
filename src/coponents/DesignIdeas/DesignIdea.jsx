@@ -188,6 +188,63 @@ const DesignIdea = () => {
       },
     ],
   };
+
+  const BedroomDesignOptionsData = {
+    type: "Bedroom",
+    title: "Bedroom Designs",
+    imageUrls: [
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1z22aZuSFxzE7G8CznysfJ6AP1_krfIJO",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1wwM9Re_H4CpLlm9kMC6aD4uoP5QWg0N6",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1wtlQwK7FiZoEY353DTVLacWZ1RgR4cQq",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1r_XbZFfkTxZoDVhM7qk2gTwhF0r2U1QT",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1ktV5GcOIvCoZJt9z-Wuj6owPsnwD_pAu",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1bPEGeGECF_AloDT-30v09JBF_pNawdDe",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1I2BwDFG6IBsjccLgClQRpHDELcCCoJqg",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1HB4tNu2fyJxez_sT8fLZ1g20934H9m5_",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1DNBmhRByGauF-9iOhaP25SHDbKg6VaVy",
+      },
+      {
+        packgeShow: true,
+        package: "Basic",
+        urlId: "1BgogO7MsYcxHvzh79CCzSorZeIMiVMfn",
+      },
+    ],
+  };
   const checkMobile = useIsMobile() ? "100%" : "30%";
 
   const alerWhenClickImage = () => {
@@ -325,6 +382,79 @@ const DesignIdea = () => {
           data={KitchenDesignOptionData}
           handleClick={alerWhenClickImage}
         />
+        {/* Bedroom */}
+        <div className="designIdeaPanel">
+          <span style={{ fontSize: "35px", fontWeight: "600", color: "white" }}>
+            {BedroomDesignOptionsData.title}
+          </span>
+          <div
+            style={{
+              width: "25%",
+              height: "1px",
+              background: "white",
+              marginBottom: "15px",
+            }}
+          />
+          <div
+            style={{
+              display: "flex",
+              width: "95%",
+              // border: "1px solid black",
+              flexWrap: "wrap",
+              gap: "10px",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {BedroomDesignOptionsData.imageUrls.map((mapImages) => {
+              return (
+                <motion.div
+                  initial={{ opacity: 0, x: -200 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  style={{
+                    display: "flex",
+                    width: checkMobile,
+                    flexWrap: "wrap",
+                    boxShadow: "5px 5px 5px 10px rgb(89,82,82,.5)",
+                    gap: "15vh",
+                  }}
+                >
+                  {/* for future integration as badge of package */}
+                  {/* <div
+                        style={{
+                          position: "absolute",
+                          height: "50px",
+                          width: "50px",
+                          zIndex: "5",
+                        }}
+                      >
+                        {mapImages.packgeShow ? (
+                          <div style={{ border: "1px solid black" }}>
+                            <span>{mapImages.package}</span>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                      </div> */}
+                  <img
+                    src={
+                      "https://drive.google.com/thumbnail?id=" + mapImages.urlId
+                    }
+                    alt="image"
+                    style={{
+                      objectFit: "fill",
+                      borderRadius: "5px",
+                      maxHeight: "250px",
+                      width: "100%",
+                      cursor: "pointer",
+                    }}
+                    onClick={alerWhenClickImage}
+                  />
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </Element>
   );

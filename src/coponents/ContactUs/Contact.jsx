@@ -7,7 +7,11 @@ import Textarea from "@mui/joy/Textarea";
 import Button from "@mui/material/Button";
 import useIsMobile from "../../util/useIsMobile";
 import ContactForm from "./ContactForm";
-
+import EmailIcon from "@mui/icons-material/Email";
+import Constants from "../../Constants/Constant";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 const Contact = () => {
   return (
     <Element name="contact" className="contact" id="contact">
@@ -19,9 +23,29 @@ const Contact = () => {
         className={useIsMobile() ? "contact-parent-mobile" : "contact-parent"}
       >
         <div className="left">
-          <div className="addresss-tag">address</div>
-          <div className="phone-tag">+91 9674345373</div>
-          <div className="email">Dream Weaver@gmail.com</div>
+          <span>Contact Us: </span>
+          <Divider
+            orientation="Horizontal"
+            flexItem
+            sx={{
+              fontWeight: "bold",
+              borderWidth: "1px",
+              backgroundColor: "#FFFFFF",
+            }}
+          />
+          <div className="addresss-tag">
+            <EmailIcon />
+            {Constants.ContactInfo.email}
+          </div>
+          <div className="addresss-tag">
+            <LocalPhoneIcon />
+            <WhatsAppIcon />
+            {Constants.ContactInfo.phone}
+          </div>
+          <div className="addresss-tag">
+            <LocationOnIcon />
+            {Constants.ContactInfo.address}
+          </div>
         </div>
         <Divider
           orientation="vertical"
